@@ -9,11 +9,11 @@ class Contact extends React.Component {
         </header>
         <main>
           <form action="">
-            <label for="fullname"></label>
+            <label htmlFor="fullname"></label>
             <input type="text" name="fullname" id="fullname" placeholder="Full Name" required />
-            <label for="email"></label>
+            <label htmlFor="email"></label>
             <input type="email" name="email" id="email" placeholder="Email" required />
-            <label for="message">Message</label>
+            <label htmlFor="message">Message</label>
             <textarea name="message" id="message" cols="30" rows="10" required></textarea>
             <button type="submit">Send</button>
           </form>

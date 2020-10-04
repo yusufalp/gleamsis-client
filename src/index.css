@@ -36,7 +36,8 @@ form {
 }
 
 label,
-select {
+select,
+button {
   display: block;
   margin-top: 18px;
 }
@@ -49,6 +50,12 @@ textarea {
 
 ul {
   text-align: left;
+}
+
+.required {
+  color: red;
+  position: absolute;
+  right: 25%;
 }
 
 .group {
@@ -79,6 +86,10 @@ ul {
 
   form {
     width: 25%;
+  }
+
+  .required {
+    right: 37.5%;
   }
 
   .group {

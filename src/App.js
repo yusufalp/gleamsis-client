@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Navbar/Navbar';
 import Home from './Home/Home';
 import Demo from './Demo/Demo';
+import Dashboard from './Dashboard/Dashboard';
 import Pricing from './Pricing/Pricing';
 import About from './About/About';
 import Contact from './Contact/Contact';
@@ -21,6 +22,10 @@ function App() {
         <Route
           path="/demo"
           component={Demo}
+        />
+        <Route
+          path="/dashboard"
+          component={Dashboard}
         />
         <Route
           path="/pricing"

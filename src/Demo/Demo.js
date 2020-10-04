@@ -1,6 +1,53 @@
 import React from 'react';
 
 class Demo extends React.Component {
+  state = {
+    username: '',
+    password: '',
+    role: 'admin',
+    error: ''
+  }
+  handleUsernameChange = (value) => {
+    this.setState({
+      username: value.trim()
+    })
+  }
+  handlePasswordChange = (value) => {
+    this.setState({
+      password: value.trim()
+    })
+  }
+  handleRoleChange = (value) => {
+    this.setState({
+      role: value
+    })
+  }
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!this.state.username || !this.state.password) {
+      this.setState({
+        error: "Username and password are required"
+      })
+      return
+    }
+
+    if (this.state.username !== "admin" || this.state.password !== "password") {
+      this.setState({
+        error: "Username and password does match"
+      })
+      return
+    }
+
+    if (this.state.role !== "admin") {
+      this.setState({
+        error: "No such user in this role"
+      })
+      return
+    }
+
+    this.props.history.push("/dashboard")
+  }
   render() {
     return (
       <div>
@@ -12,18 +59,34 @@ class Demo extends React.Component {
           </p>
         </header>
         <main>
-          <form action="">
-            <label for="username">Username</label>
-            <input type="text" name="username" id="username" required />
-            <label for="password">Password</label>
-            <input type="text" name="password" id="password" required />
-            <label for="role">Role</label>
-            <select name="role" id="role" required>
+          <form onSubmit={this.handleSubmit}>
+            <label htmlFor="username">Username*</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              onChange={e => this.handleUsernameChange(e.target.value)}
+              required />
+            <label htmlFor="password">Password*</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              onChange={e => this.handlePasswordChange(e.target.value)}
+              required />
+            <label htmlFor="role">Role*</label>
+            <select
+              name="role"
+              id="role"
+              onChange={e => this.handleRoleChange(e.target.value)}
+              required>
               <option value="admin">Admin</option>
               <option value="staff">Staff</option>
               <option value="student">Student</option>
             </select>
             <button type="submit">Log in</button>
+            <p className="error">{this.state.error}</p>
+            <p className="required">* = required fields</p>
           </form>
         </main>
       </div>
