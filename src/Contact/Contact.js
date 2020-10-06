@@ -8,13 +8,16 @@ class Contact extends React.Component {
           <h2>Contact us with your inquiries</h2>
         </header>
         <main>
-          <form action="">
-            <label htmlFor="fullname"></label>
-            <input type="text" name="fullname" id="fullname" placeholder="Full Name" required />
-            <label htmlFor="email"></label>
-            <input type="email" name="email" id="email" placeholder="Email" required />
-            <label htmlFor="message">Message</label>
-            <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+          <form action="https://formspree.io/f/xaypjzbq" method="POST">
+            <label>Your name:
+              <input type="text" />
+            </label>
+            <label>Your email:
+              <input type="email" name="_replyto" />
+            </label>
+            <label>Your message:
+              <textarea name="message" cols="20" rows="8"></textarea>
+            </label>
             <button type="submit">Send</button>
           </form>
         </main>
@@ -22,5 +25,7 @@ class Contact extends React.Component {
     )
   }
 }
+
+
 
 export default Contact;

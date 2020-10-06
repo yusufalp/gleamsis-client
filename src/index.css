@@ -7,6 +7,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a,
+a:hover,
+a:active,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
 .logo {
   margin-top: 0;
   font-size: 3rem;
@@ -36,8 +44,7 @@ form {
 }
 
 label,
-select,
-button {
+select {
   display: block;
   margin-top: 18px;
 }
@@ -46,6 +53,15 @@ input,
 select,
 textarea {
   width: 100%;
+}
+
+button[type="submit"] {
+  border-radius: 10px;
+  border-radius: none;
+  display: block;
+  width: 50%;
+  margin: 18px auto 0;
+  background-color: aqua;
 }
 
 ul {
@@ -58,11 +74,19 @@ ul {
   right: 25%;
 }
 
+table {
+  width: 100%;
+  text-align: left;
+}
+
+td {
+  padding-right: 18px;
+}
+
 .group {
   width: 100%;
-  margin: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
@@ -77,6 +101,15 @@ ul {
   margin: 0 2%;
   text-align: center;
   width: 50%;
+}
+
+.item-dash {
+  width: 100%;
+  text-align: center;
+}
+
+.item-students{
+  display: block;
 }
 
 @media all and (min-width: 850px) {
@@ -94,7 +127,9 @@ ul {
 
   .group {
     width: 80%;
+    margin: auto;
     flex-direction: row;
+    justify-content: space-around;
     align-items: flex-start;
   }
 
