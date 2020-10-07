@@ -7,10 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-a,
-a:hover,
-a:active,
-a:visited {
+nav a,
+nav a:hover,
+nav a:active,
+nav a:visited {
   color: black;
   text-decoration: none;
 }
@@ -20,6 +20,14 @@ a:visited {
   font-size: 3rem;
 }
 
+.menu-toggler {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  display: inline;
+  font-size: 36px;
+}
+
 .navbar-links {
   position: absolute;
   top: 8px;
@@ -27,6 +35,7 @@ a:visited {
 }
 
 .navbar-links a {
+  display: inline;
   font-size: 24px;
   padding-left: 36px;
 }
@@ -64,6 +73,15 @@ button[type="submit"] {
   background-color: aqua;
 }
 
+.btn-teacher,
+.btn-student {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: bisque;
+  text-decoration: none;
+  padding: 6px;
+}
+
 ul {
   text-align: left;
 }
@@ -81,6 +99,10 @@ table {
 
 td {
   padding-right: 18px;
+}
+
+.hidden {
+  display: none;
 }
 
 .group {
@@ -108,7 +130,7 @@ td {
   text-align: center;
 }
 
-.item-students{
+.item-students {
   display: block;
 }
 

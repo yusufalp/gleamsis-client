@@ -8,6 +8,9 @@ import About from './About/About';
 import Contact from './Contact/Contact';
 import Courses from './Courses/Courses';
 import Page404 from './Page404/Page404';
+import Teacher from './Teachers/Teacher';
+import AddTeacher from './Forms/AddTeacher';
+import SuccessTeacher from './Success/SuccessTeacher';
 
 import { Route, Switch } from 'react-router-dom';
 
@@ -44,6 +47,18 @@ class App extends React.Component {
           <Route
             path="/courses/:id"
             component={Courses}
+          />
+          <Route
+            path="/teachers/:id"
+            component={Teacher}
+          />
+          <Route
+            path="/AddTeacher"
+            component={AddTeacher}
+          />
+          <Route
+            path="/teacher-success"
+            component={SuccessTeacher}
           />
           <Route
             component={Page404}
