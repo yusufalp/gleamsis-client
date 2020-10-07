@@ -1,15 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import DashMessage from '../Tables/MessageTable';
 import ExpenditureTable from '../Tables/ExpenditureTable';
-import Teachers from './Teachers';
+import Teachers from '../Teachers/Teachers';
 import STORE from '../STORE/STORE';
 
 class Dashboard extends React.Component {
-  handleAdd = () => {
-    console.log('add clicked')
-  }
-  handleDelete = () => {
-    console.log('delete clicked')
+  handleAddTeacher() {
+    this.props.history.push('/AddTeacher')
   }
   render() {
     return (
@@ -37,11 +35,10 @@ class Dashboard extends React.Component {
                 </tr>
               </thead>
               {STORE.courses.map((course, i) =>
-                <Teachers key={i} course={course} />
+                <Teachers key={i} course={course} teachers={STORE.teachers} />
               )}
             </table>
-            <button onSubmit={this.handleAdd}>Add Teacher</button>
-            <button onSubmit={this.handleDelete}>Delete Teacher</button>
+            <Link to={'/AddTeacher'} className="btn-teacher">Add Teacher</Link>
           </div>
         </div>
       </div>
