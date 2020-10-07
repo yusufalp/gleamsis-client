@@ -1,6 +1,11 @@
 export default {
   teachers: [
     {
+      id: 0,
+      firstName: 'admin',
+      lastName: 'admin'
+    },
+    {
       id: 1,
       firstName: 'Alex',
       lastName: 'Jackson'
