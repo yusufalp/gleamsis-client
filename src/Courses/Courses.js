@@ -2,6 +2,12 @@ import React from 'react';
 import STORE from '../STORE/STORE';
 
 class Courses extends React.Component {
+  handleAddStudent() {
+    console.log("Add Student")
+  }
+  handleDeleteStudent() {
+    console.log("Delete Student")
+  }
   render() {
     let course = STORE.courses.find(course => course.id === Number(this.props.match.params.id))
     let teacher = STORE.teachers.find(teacher => teacher.id === course.teacher_id)
@@ -10,7 +16,6 @@ class Courses extends React.Component {
       <div>
         <h3>Hello {teacher.firstName}, this is {course.name} class</h3>
         <table>
-          {/* <caption>List of students</caption> */}
           <thead>
             <tr>
               <th>First Name</th>
@@ -28,6 +33,7 @@ class Courses extends React.Component {
             </tbody>
           )}
         </table>
+        <button className="btn-student" onClick={this.handleAddStudent}>Add Student</button>
       </div>
     )
   }
