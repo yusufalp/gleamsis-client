@@ -4,7 +4,6 @@ class Demo extends React.Component {
   state = {
     username: '',
     password: '',
-    role: 'admin',
     error: ''
   }
   handleUsernameChange = (value) => {
@@ -16,11 +15,7 @@ class Demo extends React.Component {
     this.setState({
       password: value.trim()
     })
-  }
-  handleRoleChange = (value) => {
-    this.setState({
-      role: value
-    })
+  
   }
   handleSubmit = (e) => {
     e.preventDefault();
@@ -39,13 +34,6 @@ class Demo extends React.Component {
       return
     }
 
-    if (this.state.role !== "admin") {
-      this.setState({
-        error: "No such user in this role"
-      })
-      return
-    }
-
     this.props.history.push("/dashboard")
   }
   render() {
@@ -58,6 +46,11 @@ class Demo extends React.Component {
             help you with your daily tasks and save you valuable time.
           </p>
         </header>
+        <section>
+          <p>For demo users:</p>
+          <p>Username: admin</p>
+          <p>Password: password</p>
+        </section>
         <main>
           <form onSubmit={this.handleSubmit}>
             <label htmlFor="username">Username*</label>
@@ -75,15 +68,7 @@ class Demo extends React.Component {
               onChange={e => this.handlePasswordChange(e.target.value)}
               required />
             <label htmlFor="role">Role*</label>
-            <select
-              name="role"
-              id="role"
-              onChange={e => this.handleRoleChange(e.target.value)}
-              required>
-              <option value="admin">Admin</option>
-              <option value="staff">Staff</option>
-              <option value="student">Student</option>
-            </select>
+            
             <button type="submit">Log in</button>
             <p className="error">{this.state.error}</p>
             <p className="required">* = required fields</p>
