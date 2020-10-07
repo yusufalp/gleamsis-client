@@ -3,11 +3,25 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 
 class Navbar extends React.Component {
+  state = {
+    hideMenuToggler: true
+  }
+  handleMenu = () => {
+    this.setState({
+      hideMenuToggler: !this.state.hideMenuToggler
+    })
+  }
   render() {
     return (
       <nav>
         <Link to="/"><p className="logo">G</p></Link>
-        <div className="navbar-links">
+        {/* <h2
+          className="menu-toggler"
+          onClick={this.handleMenu}
+        >X
+        </h2> */}
+        <div
+          className={`navbar-links`}>
           <Link to="/">Home</Link>
           <Link to="/demo">Demo</Link>
           <Link to="/pricing">Pricing</Link>
@@ -19,4 +33,5 @@ class Navbar extends React.Component {
   }
 }
 
+//
 export default Navbar;
