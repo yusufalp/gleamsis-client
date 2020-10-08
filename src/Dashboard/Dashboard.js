@@ -23,7 +23,7 @@ class Dashboard extends React.Component {
         </div>
         <div className="group">
           <div className="item-dash">
-            <h3>Teachers</h3>
+            <h3>Courses</h3>
             <table>
               <thead>
                 <tr>
@@ -37,6 +37,7 @@ class Dashboard extends React.Component {
               )}
             </table>
             <Link to={'/AddTeacher'} className="btn-teacher">Add Teacher</Link>
+            <Link to={'/AddCourse'} className="btn-teacher">Add Course</Link>
           </div>
         </div>
       </div>

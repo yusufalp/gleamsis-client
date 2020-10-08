@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import STORE from '../STORE/STORE';
+import DataContext from '../DataContext';
 
 class Teacher extends React.Component {
+  static contextType = DataContext;
   handleDeleteTeacher(teacher) {
     console.log(teacher)
   }
   render() {
-    let teacher = STORE.teachers.find(teacher => teacher.id === Number(this.props.match.params.id))
-    let courses = STORE.courses.filter(course => course.teacher_id === teacher.id)
+    let teacher = this.context.teachers.find(teacher => teacher.id === Number(this.props.match.params.id))
+    let courses = this.context.courses.filter(course => course.teacher_id === teacher.id)
     return (
       <div>
         <h2>Hello admin,</h2>
