@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import STORE from '../STORE/STORE';
 
 class Courses extends React.Component {
@@ -33,7 +34,8 @@ class Courses extends React.Component {
             </tbody>
           )}
         </table>
-        <button className="btn-student" onClick={this.handleAddStudent}>Add Student</button>
+        <p className={`${students.length === 0 ? "" : "hidden"}`}>No students are registered for this class</p>
+        <Link to={'/AddStudent'} className="btn-teacher">Add Student</Link>
       </div>
     )
   }

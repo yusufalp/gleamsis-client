@@ -3,12 +3,10 @@ import { Link } from 'react-router-dom';
 import DashMessage from '../Tables/MessageTable';
 import ExpenditureTable from '../Tables/ExpenditureTable';
 import Teachers from '../Teachers/Teachers';
-import STORE from '../STORE/STORE';
+import DataContext from '../DataContext';
 
 class Dashboard extends React.Component {
-  handleAddTeacher() {
-    this.props.history.push('/AddTeacher')
-  }
+  static contextType = DataContext
   render() {
     return (
       <div>
@@ -34,8 +32,8 @@ class Dashboard extends React.Component {
                   <th colSpan="3">Courses</th>
                 </tr>
               </thead>
-              {STORE.courses.map((course, i) =>
-                <Teachers key={i} course={course} teachers={STORE.teachers} />
+              {this.context.courses.map((course, i) =>
+                <Teachers key={i} course={course}/>
               )}
             </table>
             <Link to={'/AddTeacher'} className="btn-teacher">Add Teacher</Link>

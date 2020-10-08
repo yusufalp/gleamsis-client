@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import DataContext from '../DataContext';
 
 class Teachers extends React.Component {
+  static contextType = DataContext
   render() {
-    let teachers = this.props.teachers.find(teacher => teacher.id === this.props.course.teacher_id)
+    let teachers = this.context.teachers.find(teacher => teacher.id === this.props.course.teacher_id)
     return (
       <tbody>
         <tr>
