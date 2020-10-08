@@ -2,10 +2,9 @@ import React from 'react';
 
 const DataContext = React.createContext({
   teachers: [],
+  students: [],
   courses: [],
-  classes: [],
-  addTeacher: () => { },
-  deleteTeacher: () => { }
+  addTeacher: () => { }
 })
 
 export default DataContext;
