@@ -28,6 +28,13 @@ class AddCourse extends React.Component {
   handleCourseSubmit(e) {
     e.preventDefault()
 
+    if(!this.state.name || !this.state.category || !this.state.teacherId){
+      this.setState({
+        error : "Name, category and teacher are required"
+        })
+        return
+    }
+
     let newCourse = {
       id: this.context.courses.length + 1,
       name: this.state.name,
@@ -35,8 +42,10 @@ class AddCourse extends React.Component {
       teacher_id: Number(this.state.teacherId)
     }
 
-    console.log(newCourse)
     // add newCourse to the context
+    this.context.addCourse(newCourse)
+
+    this.props.history.push('/success')
   }
   render() {
     return (
@@ -47,7 +56,7 @@ class AddCourse extends React.Component {
           If the teacher does not exist, <Link to={'/AddTeacher'}>add the teacher</Link> first.
       </p>
         <form onSubmit={e => this.handleCourseSubmit(e)}>
-          <label htmlFor='name'>Course Name</label>
+          <label htmlFor='name'>Course Name*</label>
           <input
             type='text'
             name='name'
@@ -55,7 +64,7 @@ class AddCourse extends React.Component {
             onChange={e => this.handleCourseName(e.target.value)}
             required
           />
-          <label htmlFor='category'>Category</label>
+          <label htmlFor='category'>Category*</label>
           <input
             type='text'
             name='category'
@@ -63,7 +72,7 @@ class AddCourse extends React.Component {
             onChange={e => this.handleCourseCategory(e.target.value)}
             required
           />
-          <label htmlFor='teacher'>Teacher</label>
+          <label htmlFor='teacher'>Teacher*</label>
           <select
             name='teacher'
             id='teacher'
@@ -71,11 +80,12 @@ class AddCourse extends React.Component {
             onChange={e => this.handleTeacherId(e.target.value)}>
             <option value="">Select a Teacher</option>
             {this.context.teachers.map((teacher, i) =>
-              <option key={i} value={teacher.id}>{teacher.firstName}</option>
+              <option key={i} value={teacher.id}>{teacher.firstName} {teacher.lastName}</option>
             )}
           </select>
-          <button type="submit">Add Teacher</button>
+          <button type="submit">Add Course</button>
           <p>{this.state.error}</p>
+          <p className="required">* = required fields</p>
         </form>
       </div>
     )

@@ -36,7 +36,6 @@ class AddTeacher extends React.Component {
       lastName: newTeacherLName
     }
 
-    console.log(newTeacher)
     //Add newTeacher to the context 
     this.context.addTeacher(newTeacher)
 
@@ -47,7 +46,7 @@ class AddTeacher extends React.Component {
       <div>
         <h2>Add a Teacher</h2>
         <form onSubmit={e => this.handleTeacherSubmit(e)}>
-          <label htmlFor='firstName'>First Name</label>
+          <label htmlFor='firstName'>First Name*</label>
           <input
             type='text'
             name='firstName'
@@ -55,7 +54,7 @@ class AddTeacher extends React.Component {
             onChange={e => this.handleTeacherFName(e.target.value)}
             required
           />
-          <label htmlFor='lastName'>Last Name</label>
+          <label htmlFor='lastName'>Last Name*</label>
           <input
             type='text'
             name='lastName'
@@ -65,6 +64,7 @@ class AddTeacher extends React.Component {
           />
           <button type="submit">Add Teacher</button>
           <p>{this.state.error}</p>
+          <p className="required">* = required fields</p>
         </form>
       </div>
     )

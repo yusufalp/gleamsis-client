@@ -43,7 +43,9 @@ class AddStudent extends React.Component {
     }
 
     // add newStudent to the context
-    console.log(newStudent)
+    this.context.addStudent(newStudent)
+
+    this.props.history.push('/success')
   }
   render() {
     return (
@@ -54,7 +56,7 @@ class AddStudent extends React.Component {
           does not exist, <Link to={'/AddCourse'}>add the course</Link> first.
         </p>
         <form onSubmit={e => this.handleStudentSubmit(e)}>
-          <label htmlFor='firstName'>First Name</label>
+          <label htmlFor='firstName'>First Name*</label>
           <input
             type='text'
             name='firstName'
@@ -62,7 +64,7 @@ class AddStudent extends React.Component {
             onChange={e => this.handleStudentFName(e.target.value)}
             required
           />
-          <label htmlFor='lastName'>Last Name</label>
+          <label htmlFor='lastName'>Last Name*</label>
           <input
             type='text'
             name='lastName'
@@ -70,7 +72,7 @@ class AddStudent extends React.Component {
             onChange={e => this.handleStudentLName(e.target.value)}
             required
           />
-          <label htmlFor='course'>Courses</label>
+          <label htmlFor='course'>Courses*</label>
           <select
             name='course'
             id='grade'
@@ -81,7 +83,7 @@ class AddStudent extends React.Component {
               <option key={i} value={course.id}>{course.name}</option>
             )}
           </select>
-          <label htmlFor='grade'>Grade</label>
+          <label htmlFor='grade'>Grade*</label>
           <select
             type='text'
             name='grade'
@@ -93,8 +95,9 @@ class AddStudent extends React.Component {
               <option key={i}>{grade}</option>
             )}
           </select>
-          <button type="submit">Add Teacher</button>
+          <button type="submit">Add Student</button>
           <p>{this.state.error}</p>
+          <p className="required">* = required fields</p>
         </form>
       </div>
     )
