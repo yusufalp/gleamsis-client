@@ -1,4 +1,6 @@
 import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+
 import Navbar from './Navbar/Navbar';
 import Home from './Home/Home';
 import Demo from './Demo/Demo';
@@ -7,14 +9,14 @@ import Pricing from './Pricing/Pricing';
 import About from './About/About';
 import Contact from './Contact/Contact';
 import Courses from './Courses/Courses';
-import Page404 from './Page404/Page404';
 import Teacher from './Teachers/Teacher';
+import Student from './Students/Student';
 import AddTeacher from './Forms/AddTeacher';
 import AddStudent from './Forms/AddStudent';
 import AddCourse from './Forms/AddCourse';
 import Success from './Success/Success';
+import Page404 from './Page404/Page404';
 
-import { Route, Switch } from 'react-router-dom';
 import DataContext from './DataContext';
 import STORE from './STORE/STORE';
 
@@ -25,16 +27,39 @@ class App extends React.Component {
     courses: STORE.courses,
   }
   addTeacher = (newTeacher) => {
-    this.setState({
-      teachers: [...this.state.teachers, newTeacher]
-    })
+    if (newTeacher) {
+      this.setState({
+        teachers: [...this.state.teachers, newTeacher]
+      })
+    }
+  }
+  addCourse = (newCourse) => {
+    if (newCourse) {
+      this.setState({
+        courses: [...this.state.courses, newCourse]
+      })
+    }
+  }
+  addStudent = (newStudent) => {
+    if (newStudent) {
+      this.setState({
+        students: [...this.state.students, newStudent]
+      })
+    }
+  }
+  componentDidMount() {
+    this.addTeacher()
+    this.addCourse()
+    this.addStudent()
   }
   render() {
     const contextValue = {
       teachers: this.state.teachers,
       students: this.state.students,
       courses: this.state.courses,
-      addTeacher: this.addTeacher
+      addTeacher: this.addTeacher,
+      addCourse: this.addCourse,
+      addStudent: this.addStudent
     }
     return (
       <div className="App">
@@ -72,6 +97,10 @@ class App extends React.Component {
             <Route
               path="/teachers/:id"
               component={Teacher}
+            />
+            <Route
+              path="/students/:id"
+              component={Student}
             />
             <Route
               path="/AddTeacher"

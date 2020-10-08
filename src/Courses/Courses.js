@@ -1,18 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import STORE from '../STORE/STORE';
+import DataContext from '../DataContext';
 
 class Courses extends React.Component {
+  static contextType = DataContext;
   handleAddStudent() {
     console.log("Add Student")
   }
-  handleDeleteStudent() {
-    console.log("Delete Student")
-  }
   render() {
-    let course = STORE.courses.find(course => course.id === Number(this.props.match.params.id))
-    let teacher = STORE.teachers.find(teacher => teacher.id === course.teacher_id)
-    let students = STORE.students.filter(students => students.course_id === course.id)
+    let course = this.context.courses.find(course => course.id === Number(this.props.match.params.id))
+    let teacher = this.context.teachers.find(teacher => teacher.id === course.teacher_id)
+    let students = this.context.students.filter(students => students.course_id === course.id)
     return (
       <div>
         <h3>Hello {teacher.firstName}, this is {course.name} class</h3>
@@ -27,8 +25,8 @@ class Courses extends React.Component {
           {students.map((student, i) =>
             <tbody key={i}>
               <tr>
-                <td>{student.firstName}<hr /></td>
-                <td>{student.lastName}<hr /></td>
+                <td><Link to={`/students/${student.id}`}>{student.firstName}</Link><hr /></td>
+                <td><Link to={`/students/${student.id}`}>{student.lastName}</Link><hr /></td>
                 <td>{student.grade}<hr /></td>
               </tr>
             </tbody>
