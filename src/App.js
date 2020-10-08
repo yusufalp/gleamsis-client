@@ -10,60 +10,90 @@ import Courses from './Courses/Courses';
 import Page404 from './Page404/Page404';
 import Teacher from './Teachers/Teacher';
 import AddTeacher from './Forms/AddTeacher';
-import SuccessTeacher from './Success/SuccessTeacher';
+import AddStudent from './Forms/AddStudent';
+import AddCourse from './Forms/AddCourse';
+import Success from './Success/Success';
 
 import { Route, Switch } from 'react-router-dom';
+import DataContext from './DataContext';
+import STORE from './STORE/STORE';
 
 class App extends React.Component {
+  state = {
+    teachers: STORE.teachers,
+    students: STORE.students,
+    courses: STORE.courses,
+  }
+  addTeacher = (newTeacher) => {
+    this.setState({
+      teachers: [...this.state.teachers, newTeacher]
+    })
+  }
   render() {
+    const contextValue = {
+      teachers: this.state.teachers,
+      students: this.state.students,
+      courses: this.state.courses,
+      addTeacher: this.addTeacher
+    }
     return (
       <div className="App">
-        <Navbar />
-        <Switch>
-          <Route
-            exact path="/"
-            component={Home}
-          />
-          <Route
-            path="/demo"
-            component={Demo}
-          />
-          <Route
-            path="/dashboard"
-            component={Dashboard}
-          />
-          <Route
-            path="/pricing"
-            component={Pricing}
-          />
-          <Route
-            path="/about"
-            component={About}
-          />
-          <Route
-            path="/contact"
-            component={Contact}
-          />
-          <Route
-            path="/courses/:id"
-            component={Courses}
-          />
-          <Route
-            path="/teachers/:id"
-            component={Teacher}
-          />
-          <Route
-            path="/AddTeacher"
-            component={AddTeacher}
-          />
-          <Route
-            path="/teacher-success"
-            component={SuccessTeacher}
-          />
-          <Route
-            component={Page404}
-          />
-        </Switch>
+        <DataContext.Provider value={contextValue}>
+          <Navbar />
+          <Switch>
+            <Route
+              exact path="/"
+              component={Home}
+            />
+            <Route
+              path="/demo"
+              component={Demo}
+            />
+            <Route
+              path="/dashboard"
+              component={Dashboard}
+            />
+            <Route
+              path="/pricing"
+              component={Pricing}
+            />
+            <Route
+              path="/about"
+              component={About}
+            />
+            <Route
+              path="/contact"
+              component={Contact}
+            />
+            <Route
+              path="/courses/:id"
+              component={Courses}
+            />
+            <Route
+              path="/teachers/:id"
+              component={Teacher}
+            />
+            <Route
+              path="/AddTeacher"
+              component={AddTeacher}
+            />
+            <Route
+              path="/AddStudent"
+              component={AddStudent}
+            />
+            <Route
+              path="/AddCourse"
+              component={AddCourse}
+            />
+            <Route
+              path="/success"
+              component={Success}
+            />
+            <Route
+              component={Page404}
+            />
+          </Switch>
+        </DataContext.Provider>
       </div>
     );
   }
