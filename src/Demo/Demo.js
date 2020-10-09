@@ -67,8 +67,6 @@ class Demo extends React.Component {
               id="password"
               onChange={e => this.handlePasswordChange(e.target.value)}
               required />
-            <label htmlFor="role">Role*</label>
-            
             <button type="submit">Log in</button>
             <p className="error">{this.state.error}</p>
             <p className="required">* = required fields</p>

@@ -11,8 +11,8 @@ class Pricing extends React.Component {
           </p>
         </header>
         <main>
-          <div class="group">
-            <section class="item-pricing">
+          <div className="group">
+            <section className="item-pricing">
               <h3>Individual Schools</h3>
               <p>
                 Small size schools
@@ -25,7 +25,7 @@ class Pricing extends React.Component {
               </ul>
               <button type="submit">Request a quote</button>
             </section>
-            <section class="item-pricing">
+            <section className="item-pricing">
               <h3>Districts</h3>
               <p>
                 Larger or multiple schools
@@ -38,7 +38,7 @@ class Pricing extends React.Component {
               </ul>
               <button type="submit">Request a quote</button>
             </section>
-            <section class="item-pricing">
+            <section className="item-pricing">
               <h3>Enterprise</h3>
               <p>
                 Contact us for a personalized offer
