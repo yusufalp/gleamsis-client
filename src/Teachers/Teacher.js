@@ -4,8 +4,21 @@ import DataContext from '../DataContext';
 
 class Teacher extends React.Component {
   static contextType = DataContext;
+  state = {
+    showMessage: false,
+    message: ''
+  }
   handleDeleteTeacher(teacher) {
-    console.log(teacher)
+    let answer = prompt('BE CAREFUL! If you delete a teacher, the COURSE and ALL STUDENTS associated with the teacher will be deleted too. Do you want to confirm delete teacher? (Yes/No)')
+    if (answer.toLowerCase().trim() === 'yes') {
+      this.context.deleteTeacher(teacher)
+      this.props.history.push('/deleted')
+    } else {
+      this.setState({
+        showMessage: true,
+        message: 'Teacher is NOT deleted'
+      })
+    }
   }
   render() {
     let teacher = this.context.teachers.find(teacher => teacher.id === Number(this.props.match.params.id))
@@ -23,6 +36,7 @@ class Teacher extends React.Component {
         <button
           className={`btn-teacher ${teacher.id === 0 ? "hidden" : ""}`}
           onClick={e => this.handleDeleteTeacher(teacher)}>Delete Teacher</button>
+        <p className={`${this.state.showMessage ? "" : "hidden"}`}>{this.state.message}</p>
       </div>
     )
   }

@@ -31,7 +31,7 @@ class AddTeacher extends React.Component {
     }
 
     let newTeacher = {
-      id: this.context.teachers.length,
+      id: this.context.teachers.length + 1,
       firstName: newTeacherFName,
       lastName: newTeacherLName
     }
