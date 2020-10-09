@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 
 import Navbar from './Navbar/Navbar';
 import Home from './Home/Home';
@@ -14,7 +14,8 @@ import Student from './Students/Student';
 import AddTeacher from './Forms/AddTeacher';
 import AddStudent from './Forms/AddStudent';
 import AddCourse from './Forms/AddCourse';
-import Success from './Success/Success';
+import Success from './Confirmation/Success';
+import Deleted from './Confirmation/Deleted';
 import Page404 from './Page404/Page404';
 
 import DataContext from './DataContext';
@@ -47,10 +48,32 @@ class App extends React.Component {
       })
     }
   }
+  deleteTeacher = (teacher) => {
+    if (teacher) {
+      let newTeacherList = this.state.teachers.filter(teachers => teachers.id !== teacher.id)
+      let newCourseList = this.state.courses.filter(courses => courses.teacher_id !== teacher.id)
+      this.setState({
+        teachers: newTeacherList,
+        courses: newCourseList
+      })
+    }
+  }
+  deleteStudent = (student) => {
+    if (student) {
+      console.log(student)
+      let newStudentList = this.state.students.filter(students => students.firstName !== student.firstName)
+      console.log(newStudentList)
+      this.setState({
+        students: newStudentList
+      })
+    }
+  }
   componentDidMount() {
     this.addTeacher()
     this.addCourse()
     this.addStudent()
+    this.deleteTeacher()
+    this.deleteStudent()
   }
   render() {
     const contextValue = {
@@ -59,7 +82,9 @@ class App extends React.Component {
       courses: this.state.courses,
       addTeacher: this.addTeacher,
       addCourse: this.addCourse,
-      addStudent: this.addStudent
+      addStudent: this.addStudent,
+      deleteTeacher: this.deleteTeacher,
+      deleteStudent: this.deleteStudent
     }
     return (
       <div className="App">
@@ -119,6 +144,10 @@ class App extends React.Component {
               component={Success}
             />
             <Route
+              path="/deleted"
+              component={Deleted}
+            />
+            <Route
               component={Page404}
             />
           </Switch>
@@ -128,4 +157,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default withRouter(App);
