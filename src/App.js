@@ -60,9 +60,7 @@ class App extends React.Component {
   }
   deleteStudent = (student) => {
     if (student) {
-      console.log(student)
       let newStudentList = this.state.students.filter(students => students.firstName !== student.firstName)
-      console.log(newStudentList)
       this.setState({
         students: newStudentList
       })
