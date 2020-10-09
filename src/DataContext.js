@@ -6,7 +6,9 @@ const DataContext = React.createContext({
   courses: [],
   addTeacher: () => { },
   addCourse: () => { },
-  addStudent: () => { }
+  addStudent: () => { },
+  deleteTeacher: () => { },
+  deleteStudent: () => { }
 })
 
 export default DataContext;
