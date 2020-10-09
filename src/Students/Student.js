@@ -10,7 +10,12 @@ class Student extends React.Component {
   }
   handleDeleteStudent(student) {
     let answer = prompt('BE CAREFUL! If you delete a student, they will be removed from all the courses they are registered. Do you want to confirm delete student? (Yes/No)')
-    if (answer.toLowerCase().trim() === 'yes') {
+    if (answer === null) {
+      this.setState({
+        showMessage: true,
+        message: 'Student is NOT deleted'
+      })
+    } else if (answer.toLowerCase().trim() === 'yes') {
       this.context.deleteStudent(student)
       this.props.history.push('/deleted')
     } else {

@@ -10,7 +10,12 @@ class Teacher extends React.Component {
   }
   handleDeleteTeacher(teacher) {
     let answer = prompt('BE CAREFUL! If you delete a teacher, the COURSE and ALL STUDENTS associated with the teacher will be deleted too. Do you want to confirm delete teacher? (Yes/No)')
-    if (answer.toLowerCase().trim() === 'yes') {
+    if (answer === null) {
+      this.setState({
+        showMessage: true,
+        message: 'Teacher is NOT deleted'
+      })
+    } else if (answer.toLowerCase().trim() === 'yes') {
       this.context.deleteTeacher(teacher)
       this.props.history.push('/deleted')
     } else {
