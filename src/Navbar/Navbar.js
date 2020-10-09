@@ -4,24 +4,24 @@ import { Link } from 'react-router-dom'
 
 class Navbar extends React.Component {
   state = {
-    hideMenuToggler: true
+    menuVisible: true
   }
   handleMenu = () => {
     this.setState({
-      hideMenuToggler: !this.state.hideMenuToggler
+      menuVisible: !this.state.menuVisible
     })
   }
   render() {
     return (
       <nav>
         <Link to="/"><p className="logo">G</p></Link>
-        {/* <h2
+        <button
           className="menu-toggler"
           onClick={this.handleMenu}
         >X
-        </h2> */}
+        </button>
         <div
-          className={`navbar-links`}>
+          className={`navbar-links ${this.state.menuVisible ? "open-menu":""}`}>
           <Link to="/">Home</Link>
           <Link to="/demo">Demo</Link>
           <Link to="/pricing">Pricing</Link>
