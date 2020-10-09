@@ -51,7 +51,7 @@ class AddStudent extends React.Component {
     return (
       <div>
         <h2>Add a Student</h2>
-        <p>
+        <p className='add-info'>
           Use the form below to add a student. You must add a student to a current course. If the course
           does not exist, <Link to={'/AddCourse'}>add the course</Link> first.
         </p>

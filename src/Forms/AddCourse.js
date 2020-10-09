@@ -17,7 +17,7 @@ class AddCourse extends React.Component {
   }
   handleCourseCategory(value) {
     this.setState({
-      category: value
+      category: value.trim()
     })
   }
   handleTeacherId(value) {
@@ -51,7 +51,7 @@ class AddCourse extends React.Component {
     return (
       <div>
         <h2>Add a Course</h2>
-        <p>
+        <p className='add-info'>
           Use the form below to add a course. You must add a course if there is a teacher to teach it.
           If the teacher does not exist, <Link to={'/AddTeacher'}>add the teacher</Link> first.
       </p>
