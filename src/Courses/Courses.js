@@ -4,12 +4,9 @@ import DataContext from '../DataContext';
 
 class Courses extends React.Component {
   static contextType = DataContext;
-  handleAddStudent() {
-    console.log("Add Student")
-  }
   render() {
     let course = this.context.courses.find(course => course.id === Number(this.props.match.params.id))
-    let teacher = this.context.teachers.find(teacher => teacher.id === course.teacher_id)
+    let teacher = this.context.teachers.find(teacher => teacher.id === Number(course.teacher_id))
     let students = this.context.students.filter(students => students.course_id === course.id)
     return (
       <div>
