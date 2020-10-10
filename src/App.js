@@ -66,13 +66,6 @@ class App extends React.Component {
       })
     }
   }
-  componentDidMount() {
-    this.addTeacher()
-    this.addCourse()
-    this.addStudent()
-    this.deleteTeacher()
-    this.deleteStudent()
-  }
   render() {
     const contextValue = {
       teachers: this.state.teachers,
@@ -126,15 +119,15 @@ class App extends React.Component {
               component={Student}
             />
             <Route
-              path="/AddTeacher"
+              path="/add-teacher"
               component={AddTeacher}
             />
             <Route
-              path="/AddStudent"
+              path="/add-student"
               component={AddStudent}
             />
             <Route
-              path="/AddCourse"
+              path="/add-course"
               component={AddCourse}
             />
             <Route
