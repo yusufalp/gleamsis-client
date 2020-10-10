@@ -10,13 +10,13 @@ class Contact extends React.Component {
         <main>
           <form action="https://formspree.io/f/xaypjzbq" method="POST">
             <label>Your name:
-              <input type="text" />
+              <input type="text" required />
             </label>
             <label>Your email:
-              <input type="email" name="_replyto" />
+              <input type="email" name="_replyto" required />
             </label>
             <label>Your message:
-              <textarea name="message" cols="20" rows="8"></textarea>
+              <textarea name="message" cols="20" rows="8" required></textarea>
             </label>
             <button type="submit">Send</button>
           </form>
@@ -25,7 +25,5 @@ class Contact extends React.Component {
     )
   }
 }
-
-
 
 export default Contact;
