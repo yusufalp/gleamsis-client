@@ -15,21 +15,30 @@ class Demo extends React.Component {
     this.setState({
       password: value.trim()
     })
-  
+
   }
   handleSubmit = (e) => {
     e.preventDefault();
+    let username = this.state.username
+    let password = this.state.password
 
-    if (!this.state.username || !this.state.password) {
+    if (username.toLowerCase() !== 'admin'){
       this.setState({
-        error: "Username and password are required"
+        error: "Username does not exists"
       })
       return
     }
 
-    if (this.state.username !== "admin" || this.state.password !== "password") {
+      if (!username.toLowerCase() || !password) {
+        this.setState({
+          error: "Username and password are required"
+        })
+        return
+      }
+
+    if (username.toLowerCase() !== "admin" || password !== "password") {
       this.setState({
-        error: "Username and password does match"
+        error: "Username and password does not match"
       })
       return
     }
