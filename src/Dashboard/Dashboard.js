@@ -36,8 +36,8 @@ class Dashboard extends React.Component {
                 <Teachers key={i} course={course}/>
               )}
             </table>
-            <Link to={'/AddTeacher'} className="btn-teacher">Add Teacher</Link>
-            <Link to={'/AddCourse'} className="btn-teacher">Add Course</Link>
+            <Link to={'/add-teacher'} className="btn-teacher">Add Teacher</Link>
+            <Link to={'/add-course'} className="btn-teacher">Add Course</Link>
           </div>
         </div>
       </div>
