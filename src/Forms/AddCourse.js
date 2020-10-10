@@ -53,7 +53,7 @@ class AddCourse extends React.Component {
         <h2>Add a Course</h2>
         <p className='add-info'>
           Use the form below to add a course. You must add a course if there is a teacher to teach it.
-          If the teacher does not exist, <Link to={'/AddTeacher'}>add the teacher</Link> first.
+          If the teacher does not exist, <Link to={'/add-teacher'}>add the teacher</Link> first.
       </p>
         <form onSubmit={e => this.handleCourseSubmit(e)}>
           <label htmlFor='name'>Course Name*</label>

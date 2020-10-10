@@ -5,25 +5,27 @@ import DataContext from '../DataContext';
 class Student extends React.Component {
   static contextType = DataContext;
   state = {
-    showMessage: false,
-    message: ''
+    confirm: false,
+    message: '',
   }
-  handleDeleteStudent(student) {
-    let answer = prompt('BE CAREFUL! If you delete a student, they will be removed from all the courses they are registered. Do you want to confirm delete student? (Yes/No)')
-    if (answer === null) {
-      this.setState({
-        showMessage: true,
-        message: 'Student is NOT deleted'
-      })
-    } else if (answer.toLowerCase().trim() === 'yes') {
-      this.context.deleteStudent(student)
-      this.props.history.push('/deleted')
-    } else {
-      this.setState({
-        showMessage: true,
-        message: 'Student is NOT deleted'
-      })
-    }
+  handleConfirmStudent(student) {
+    this.setState({
+      confirm: true,
+      message: `Do you want to delete student ${student.firstName} ${student.lastName}?`
+    })
+  }
+  handleConfirmDelete = (student) => {
+
+    this.context.deleteStudent(student)
+    this.setState({
+      confirm: false
+    })
+    this.props.history.push('/deleted')
+  }
+  handleCancelDelete = () => {
+    this.setState({
+      confirm: false
+    })
   }
 
   render() {
@@ -46,8 +48,13 @@ class Student extends React.Component {
         {enrolledCourses.map((course, i) =>
           <p key={i}><Link to={`/courses/${course.id}`}>{course.name}</Link></p>
         )}
-        <button className='btn-teacher' onClick={e => this.handleDeleteStudent(student)}>Delete Student</button>
-        <p className={`${this.state.showMessage ? "" : "hidden"}`}>{this.state.message}</p>
+        <button className='btn-teacher' onClick={e => this.handleConfirmStudent(student)}>Delete Student</button>
+
+        <div className={`${this.state.confirm ? "" : "hidden"}`}>
+          <p >{this.state.message}</p>
+          <button onClick={e => this.handleConfirmDelete(student)}>Yes</button>
+          <button onClick={this.handleCancelDelete}>No</button>
+        </div>
       </div>
     )
   }
