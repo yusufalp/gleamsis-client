@@ -19,53 +19,138 @@ import Deleted from './Confirmation/Deleted';
 import Page404 from './Page404/Page404';
 
 import DataContext from './DataContext';
-import STORE from './STORE/STORE';
+
+import config from './config';
 
 class App extends React.Component {
   state = {
-    teachers: STORE.teachers,
-    students: STORE.students,
-    courses: STORE.courses,
+    teachers: [],
+    students: [],
+    courses: [],
+  }
+  componentDidMount() {
+    this.getTeachers()
+    this.getStudents()
+    this.getCourses()
+  }
+  getTeachers = () => {
+    const url = config.BASE_API_URL
+    fetch(`${url}/api/teachers`)
+      .then(res => res.json())
+      .then(teachers => {
+        this.setState({
+          teachers
+        })
+      })
+      .catch(err => console.log(err))
+  }
+  getStudents = () => {
+    const url = config.BASE_API_URL
+    fetch(`${url}/api/students`)
+      .then(res => res.json())
+      .then(students => {
+        this.setState({
+          students
+        })
+      })
+      .catch(err => console.log(err))
+  }
+  getCourses = () => {
+    const url = config.BASE_API_URL
+    fetch(`${url}/api/courses`)
+      .then(res => res.json())
+      .then(courses => {
+        this.setState({
+          courses
+        })
+      })
+      .catch(err => console.log(err))
   }
   addTeacher = (newTeacher) => {
-    if (newTeacher) {
-      this.setState({
-        teachers: [...this.state.teachers, newTeacher]
+    const url = config.BASE_API_URL
+    fetch(`${url}/api/teachers`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        first_name: newTeacher.firstName,
+        last_name: newTeacher.lastName
       })
-    }
+    })
+      .then(() => {
+        this.getTeachers()
+        this.props.history.push('/success')
+      })
+      .catch(err => console.log(err))
   }
   addCourse = (newCourse) => {
-    if (newCourse) {
-      this.setState({
-        courses: [...this.state.courses, newCourse]
+    const url = config.BASE_API_URL
+    fetch(`${url}/api/courses`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: newCourse.name,
+        category: newCourse.category,
+        teacher_id: newCourse.teacher_id
       })
-    }
+    })
+      .then(() => {
+        this.getCourses()
+        this.props.history.push('/success')
+      })
+      .catch(err => console.log(err))
   }
   addStudent = (newStudent) => {
-    if (newStudent) {
-      this.setState({
-        students: [...this.state.students, newStudent]
+    const url = config.BASE_API_URL
+    fetch(`${url}/api/students`, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        first_name: newStudent.firstName,
+        last_name: newStudent.lastName,
+        course_id: newStudent.course_id,
+        grade: newStudent.grade
       })
-    }
+    })
+      .then(() => {
+        this.getStudents()
+        this.props.history.push('/success')
+      })
+      .catch(err => console.log(err))
   }
   deleteTeacher = (teacher) => {
-    if (teacher) {
-      let newTeacherList = this.state.teachers.filter(teachers => teachers.id !== teacher.id)
-      let newCourseList = this.state.courses.filter(courses => courses.teacher_id !== teacher.id)
-      this.setState({
-        teachers: newTeacherList,
-        courses: newCourseList
+    const url = config.BASE_API_URL
+    fetch(`${url}/api/teachers/${teacher.id}`, {
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json'
+      }
+    })
+      .then(() => {
+        this.getTeachers()
+        this.getCourses()
+        this.props.history.push('/deleted')
       })
-    }
   }
   deleteStudent = (student) => {
-    if (student) {
-      let newStudentList = this.state.students.filter(students => students.firstName !== student.firstName)
-      this.setState({
-        students: newStudentList
+    const url = config.BASE_API_URL
+    fetch(`${url}/api/students/${student.id}`, {
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json'
+      }
+    })
+      .then(() => {
+        this.getStudents()
+        this.props.history.push('/deleted')
       })
-    }
   }
+
   render() {
     const contextValue = {
       teachers: this.state.teachers,
@@ -75,10 +160,13 @@ class App extends React.Component {
       addCourse: this.addCourse,
       addStudent: this.addStudent,
       deleteTeacher: this.deleteTeacher,
-      deleteStudent: this.deleteStudent
+      deleteStudent: this.deleteStudent,
+      getTeachers: this.getTeachers,
+      getStudents: this.getStudents,
+      getCourses: this.getCourses
     }
     return (
-      <div className="App">
+      <div className="App" >
         <DataContext.Provider value={contextValue}>
           <Navbar />
           <Switch>
