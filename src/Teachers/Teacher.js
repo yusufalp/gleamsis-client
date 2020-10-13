@@ -11,12 +11,11 @@ class Teacher extends React.Component {
   handleDeleteTeacher(teacher) {
     this.setState({
       confirm: true,
-      message: `Do you want to delete teacher ${teacher.firstName} ${teacher.lastName}?`
+      message: `BE CAREFUL. Deleting a teacher will delete all the courses this teacher is assigned. Do you want to delete teacher ${teacher.firstName} ${teacher.lastName}?`
     })
   }
   handleConfirmTeacher = (teacher) => {
     this.context.deleteTeacher(teacher)
-    this.props.history.push('/deleted')
     this.setState({
       confirm: false
     })
