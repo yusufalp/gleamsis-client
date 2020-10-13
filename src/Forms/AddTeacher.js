@@ -4,24 +4,24 @@ import DataContext from '../DataContext';
 class AddTeacher extends React.Component {
   static contextType = DataContext;
   state = {
-    teacherFName: '',
-    teacherLName: '',
+    firstName: '',
+    lastName: '',
     error: ''
   }
   handleTeacherFName(value) {
     this.setState({
-      teacherFName: value.trim()
+      firstName: value.trim()
     })
   }
   handleTeacherLName(value) {
     this.setState({
-      teacherLName: value.trim()
+      lastName: value.trim()
     })
   }
   handleTeacherSubmit(e) {
     e.preventDefault();
-    let newTeacherFName = this.state.teacherFName
-    let newTeacherLName = this.state.teacherLName
+    let newTeacherFName = this.state.firstName
+    let newTeacherLName = this.state.lastName
 
     if (!newTeacherFName || !newTeacherLName) {
       this.setState({
@@ -31,12 +31,10 @@ class AddTeacher extends React.Component {
     }
 
     let newTeacher = {
-      id: this.context.teachers.length + 1,
       firstName: newTeacherFName,
       lastName: newTeacherLName
     }
 
-    //Add newTeacher to the context 
     this.context.addTeacher(newTeacher)
 
     this.props.history.push("/success")

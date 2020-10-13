@@ -36,13 +36,11 @@ class AddCourse extends React.Component {
     }
 
     let newCourse = {
-      id: this.context.courses.length + 1,
       name: this.state.name,
       category: this.state.category,
       teacher_id: Number(this.state.teacherId)
     }
 
-    // add newCourse to the context
     this.context.addCourse(newCourse)
 
     this.props.history.push('/success')

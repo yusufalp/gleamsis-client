@@ -35,14 +35,12 @@ class AddStudent extends React.Component {
     e.preventDefault();
 
     const newStudent = {
-      id: this.context.students.length + 1,
       firstName: this.state.firstName,
       lastName: this.state.lastName,
       course_id: Number(this.state.courseId),
       grade: this.state.grade
     }
 
-    // add newStudent to the context
     this.context.addStudent(newStudent)
 
     this.props.history.push('/success')
