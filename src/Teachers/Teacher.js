@@ -27,14 +27,14 @@ class Teacher extends React.Component {
   }
 
   render() {
-    let teacher = this.context.teachers.find(teacher => teacher.id === Number(this.props.match.params.id))
+    let teacher = this.context.teachers.find(teacher => teacher.id === Number(this.props.match.params.id)) || {}
     let courses = this.context.courses.filter(course => course.teacher_id === teacher.id)
     return (
       <div>
         <h2>Hello admin,</h2>
-        <p>This is {teacher.firstName} {teacher.lastName}'s information</p>
-        <p>First Name: {teacher.firstName}</p>
-        <p>Last Name: {teacher.lastName}</p>
+        <p>This is {teacher.first_name} {teacher.last_name}'s information</p>
+        <p>First Name: {teacher.first_name}</p>
+        <p>Last Name: {teacher.last_name}</p>
         <p>Courses:</p>
         {courses.map((course, i) =>
           <p key={i}><Link to={`/courses/${course.id}`}>{course.name}</Link></p>

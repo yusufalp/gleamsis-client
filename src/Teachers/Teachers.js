@@ -7,13 +7,12 @@ class Teachers extends React.Component {
   render() {
     let teachers = this.context.teachers.find(teacher => teacher.id === this.props.course.teacher_id) || {}
     return (
-      <tbody>
         <tr>
           <td>
-            <Link to={`/teachers/${teachers.id}`}>{teachers.firstName}</Link>
+            <Link to={`/teachers/${teachers.id}`}>{teachers.first_name}</Link>
           </td>
           <td>
-            <Link to={`/teachers/${teachers.id}`}>{teachers.lastName}</Link>
+            <Link to={`/teachers/${teachers.id}`}>{teachers.last_name}</Link>
           </td>
           <td>
             <Link to={`/courses/${this.props.course.id}`}>
@@ -21,9 +20,12 @@ class Teachers extends React.Component {
             </Link>
           </td>
         </tr>
-      </tbody>
     )
   }
+}
+
+Teachers.defaultProps = {
+  course: {}
 }
 
 export default Teachers;
