@@ -74,8 +74,8 @@ class App extends React.Component {
         'content-type': 'application/json'
       },
       body: JSON.stringify({
-        first_name: newTeacher.firstName,
-        last_name: newTeacher.lastName
+        first_name: newTeacher.first_name,
+        last_name: newTeacher.last_name
       })
     })
       .then(() => {
@@ -111,8 +111,8 @@ class App extends React.Component {
         'content-type': 'application/json'
       },
       body: JSON.stringify({
-        first_name: newStudent.firstName,
-        last_name: newStudent.lastName,
+        first_name: newStudent.first_name,
+        last_name: newStudent.last_name,
         course_id: newStudent.course_id,
         grade: newStudent.grade
       })

@@ -5,12 +5,12 @@ import DataContext from '../DataContext';
 class Courses extends React.Component {
   static contextType = DataContext;
   render() {
-    let course = this.context.courses.find(course => course.id === Number(this.props.match.params.id))
-    let teacher = this.context.teachers.find(teacher => teacher.id === course.teacher_id)
+    let course = this.context.courses.find(course => course.id === Number(this.props.match.params.id)) || {}
+    let teacher = this.context.teachers.find(teacher => teacher.id === course.teacher_id) || {}
     let students = this.context.students.filter(students => students.course_id === course.id)
     return (
       <div>
-        <h3>Hello {teacher.firstName}, this is {course.name} class</h3>
+        <h3>Hello {teacher.first_name}, this is {course.name} class</h3>
         <table>
           <thead>
             <tr>
@@ -22,8 +22,8 @@ class Courses extends React.Component {
           {students.map((student, i) =>
             <tbody key={i}>
               <tr>
-                <td><Link to={`/students/${student.id}`}>{student.firstName}</Link><hr /></td>
-                <td><Link to={`/students/${student.id}`}>{student.lastName}</Link><hr /></td>
+                <td><Link to={`/students/${student.id}`}>{student.first_name}</Link><hr /></td>
+                <td><Link to={`/students/${student.id}`}>{student.last_name}</Link><hr /></td>
                 <td>{student.grade}<hr /></td>
               </tr>
             </tbody>

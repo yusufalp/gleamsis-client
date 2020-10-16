@@ -32,9 +32,13 @@ class Dashboard extends React.Component {
                   <th colSpan="3">Courses</th>
                 </tr>
               </thead>
-              {this.context.courses.map((course, i) =>
-                <Teachers key={i} course={course}/>
-              )}
+
+              <tbody>
+                {this.context.courses.map((course, i) =>
+                  <Teachers key={i} course={course} />
+                )}
+
+              </tbody>
             </table>
             <Link to={'/add-teacher'} className="btn-teacher">Add Teacher</Link>
             <Link to={'/add-course'} className="btn-teacher">Add Course</Link>
