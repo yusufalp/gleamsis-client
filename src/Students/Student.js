@@ -11,7 +11,7 @@ class Student extends React.Component {
   handleConfirmStudent(student) {
     this.setState({
       confirm: true,
-      message: `BE CAREFUL. Deleting a student removes the student from all of the classes registered. Do you want to delete student ${student.firstName} ${student.lastName}?`
+      message: `BE CAREFUL. Deleting a student removes the student from all of the classes registered. Do you want to delete student ${student.first_name} ${student.last_name}?`
     })
   }
   handleConfirmDelete = (student) => {
