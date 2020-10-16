@@ -35,8 +35,8 @@ class AddStudent extends React.Component {
     e.preventDefault();
 
     const newStudent = {
-      firstName: this.state.firstName,
-      lastName: this.state.lastName,
+      first_name: this.state.firstName,
+      last_name: this.state.lastName,
       course_id: Number(this.state.courseId),
       grade: this.state.grade
     }

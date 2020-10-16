@@ -78,7 +78,7 @@ class AddCourse extends React.Component {
             onChange={e => this.handleTeacherId(e.target.value)}>
             <option value="">Select a Teacher</option>
             {this.context.teachers.map((teacher, i) =>
-              <option key={i} value={teacher.id}>{teacher.firstName} {teacher.lastName}</option>
+              <option key={i} value={teacher.id}>{teacher.first_name} {teacher.last_name}</option>
             )}
           </select>
           <button type="submit">Add Course</button>

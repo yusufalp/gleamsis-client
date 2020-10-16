@@ -31,8 +31,8 @@ class AddTeacher extends React.Component {
     }
 
     let newTeacher = {
-      firstName: newTeacherFName,
-      lastName: newTeacherLName
+      first_name: newTeacherFName,
+      last_name: newTeacherLName
     }
 
     this.context.addTeacher(newTeacher)
