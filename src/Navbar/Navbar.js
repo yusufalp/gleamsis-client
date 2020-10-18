@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Navbar.css'
 import { Link } from 'react-router-dom'
 
 class Navbar extends React.Component {
@@ -14,11 +14,11 @@ class Navbar extends React.Component {
   render() {
     return (
       <nav>
-        <Link to="/"><p className="logo">G</p></Link>
+        <Link to="/"><p className="logo">G<span className="logo-part">leamSIS</span></p></Link>
         <button
           className="menu-toggler"
           onClick={this.handleMenu}
-        >X
+        ><i className="fas fa-chevron-circle-down"></i>
         </button>
         <div
           className={`navbar-links ${this.state.menuVisible ? "open-menu":""}`}>

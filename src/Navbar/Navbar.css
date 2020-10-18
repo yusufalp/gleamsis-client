@@ -1,0 +1,73 @@
+nav a,
+nav a:hover,
+nav a:active,
+nav a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.logo {
+  display: inline;
+  font-size: 40px;
+}
+
+.menu-toggler {
+  position: absolute;
+  right: 8px;
+  top: 10px;
+  display: inline;
+  font-size: 36px;
+  border: none;
+  background-color: transparent;
+}
+
+.navbar-links a {
+  display: block;
+  font-size: 24px;
+  text-align: right;
+  padding-left: 36px;
+  padding-top: 18px;
+  text-decoration: underline;
+}
+
+.navbar-links a:focus {
+  color: #FF0022;
+  text-decoration: none;
+}
+
+.logo-part {
+  opacity: 0;
+}
+
+.logo-part:hover{
+  opacity: 1;
+}
+
+@media all and (min-width: 850px) {
+  .menu-toggler {
+    display: none;
+    font-size: 54px;
+  }
+
+  .navbar-links {
+    display: inline;
+    position: absolute;
+    right: 8px;
+    top: 42px;
+    margin: auto;
+    text-align: right;
+  }
+
+  .navbar-links a {
+    display: inline;
+    text-decoration: none;
+  }
+
+  .navbar-links a:hover {
+    text-decoration: underline;
+  }
+
+  .logo {
+    font-size: 60px;
+  }
+}
