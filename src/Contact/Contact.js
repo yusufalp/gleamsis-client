@@ -9,16 +9,17 @@ class Contact extends React.Component {
         </header>
         <main>
           <form action="https://formspree.io/f/xaypjzbq" method="POST">
-            <label>Your name:
-              <input type="text" required />
+            <label>
+              <input type="text" placeholder="Name" required />
             </label>
-            <label>Your email:
-              <input type="email" name="_replyto" required />
+            <label>
+              <input type="email" name="_replyto" placeholder="Email" required />
             </label>
-            <label>Your message:
-              <textarea name="message" cols="20" rows="8" required></textarea>
+            <label>
+              <textarea name="message" cols="20" rows="8" placeholder="Message" required></textarea>
             </label>
             <button type="submit">Send</button>
+            <p className="required">All fields are required</p>
           </form>
         </main>
       </div>
