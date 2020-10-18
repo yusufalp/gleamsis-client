@@ -1,45 +1,11 @@
 body {
   /* margin: 0; */
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  background-color: #FDFFFC;
+  font-family: 'Barlow', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-nav a,
-nav a:hover,
-nav a:active,
-nav a:visited {
-  color: black;
-  text-decoration: none;
-}
-
-.logo {
-  margin: 0;
-  padding: 0;
-  font-size: 60px;
-}
-
-.menu-toggler {
-  position: absolute;
-  right: 24px;
-  top: 16px;
-  display: inline;
-  font-size: 54px;
-  border: none;
-  background-color: transparent;
-}
-
-.navbar-links {
-  padding-bottom: 24px;
-}
-
-.navbar-links a {
-  display: block;
-  font-size: 24px;
-  text-align: right;
-  padding: 0 0 12px 32px;
 }
 
 header {
@@ -60,19 +26,35 @@ select {
   margin-top: 18px;
 }
 
+textarea {
+  width: 100%;
+  background-color: #FDFFFC;
+  font-family: 'Barlow', sans-serif;
+}
+
 input,
 select,
 textarea {
+  font-size: 20px;
   width: 100%;
+  border: none;
+  border-bottom: 1px solid;
 }
 
 button[type="submit"] {
+  border: none;
+  background-color: #41EAD4;
+  font-size: 18px;
   border-radius: 10px;
-  border-radius: none;
   display: block;
   width: 50%;
   margin: 18px auto 0;
-  background-color: aqua;
+  padding: 6px;
+}
+
+button[type="submit"]:hover {
+  box-shadow: 2px 0 12px #41EAD4;
+  transform: scale(1.1);
 }
 
 .btn-teacher,
@@ -85,13 +67,24 @@ button[type="submit"] {
 }
 
 ul {
-  text-align: left;
+  text-align: center;
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  padding-bottom: 6px;
 }
 
 .required {
-  color: red;
-  position: absolute;
-  right: 25%;
+  color: #FF0022;
+}
+
+.error {
+  border: 1px #FF0022 solid;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 6px;
 }
 
 table {
@@ -125,7 +118,11 @@ td {
 .item-pricing {
   margin: 0 2%;
   text-align: center;
-  width: 90%;
+  width: 50%;
+}
+
+.item-pricing p {
+  font-weight: bold;
 }
 
 .item-dash {
@@ -137,8 +134,8 @@ td {
   display: block;
 }
 
-.add-info,
-h2 {
+h2,
+.add-info {
   width: 80%;
   margin: auto;
   text-align: center;
@@ -158,10 +155,6 @@ h2 {
     width: 40%;
   }
 
-  .required {
-    right: 30%;
-  }
-
   .group {
     width: 80%;
     margin: auto;
@@ -178,20 +171,4 @@ h2 {
     width: 50%;
   }
 
-  .menu-toggler {
-    display: none;
-  }
-
-  .navbar-links {
-    display: inline;
-    position: absolute;
-    right: 8px;
-    top: 8px;
-    margin: auto;
-    text-align: right;
-  }
-
-  .navbar-links a {
-    display: inline;
-  }
 }
