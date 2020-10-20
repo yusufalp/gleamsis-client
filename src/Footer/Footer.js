@@ -8,6 +8,9 @@ class Footer extends React.Component {
         <div className='group3'>
           <div className='item-footer'>
             <h3>GleamSIS</h3>
+            <p>123 Sesame St,</p>
+            <p>San Francisco, CA 94105</p>
+            <p>415-123-4567</p>
           </div>
           <div className='item-footer'>
             <h4>Company</h4>
@@ -20,13 +23,8 @@ class Footer extends React.Component {
             <p>Information Systems</p>
             <p>Management Systems</p>
           </div>
-          <div className='item-footer'>
-            <h4>Contact</h4>
-            <p>Address</p>
-            <p>Phone</p>
-          </div>
         </div>
-        <p className='copy'>Copyrights</p>
+        <p className='copy'>Copyrights &#169; Yusuf Alp 2020</p>
       </div>
     )
   }
