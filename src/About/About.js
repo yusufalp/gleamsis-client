@@ -1,19 +1,32 @@
 import React from 'react';
+import './About.css';
 
 class About extends React.Component {
   render() {
     return (
       <div>
-        <header>
-          <h2>About GleamSIS</h2>
+        <header className='about'>
+          <h2 className='about-title'>About GleamSIS</h2>
           <p>
-            We are a one stop solution for all of your student information systems
+            We are a one stop solution for all of your student information systems. Born in 2020,
+            will solve all of your school information system needs.
           </p>
           <main>
             <section>
-              <h3>Something goes here</h3>
+              <h3>Why GleamSIS</h3>
               <p>
-                More details about it
+                GleamSIS is born because educators needed it. In education, we are
+                generating so many data such as grades, contact information, student, teacher
+                and parent experience, keeping track of progress, both academically and personally.
+                That is why we made GleamSIS.
+              </p>
+              <p>
+                With GleamSIS, you can see student and teacher information, course information, students'
+                registered courses and their grades. Our future expansions will include much more
+                capabilities and will involve parents too.
+              </p>
+              <p>
+                Feel free to explore our product and contact us if you have more questions
               </p>
             </section>
           </main>
