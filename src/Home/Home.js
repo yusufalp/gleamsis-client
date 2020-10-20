@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 import Testimonials from './Testimonials';
 
@@ -50,7 +51,7 @@ class Home extends React.Component {
           <img className='banner' src='images/banner4.png' alt=''></img>
           <section>
             <h2>Want to learn more</h2>
-            <button type='submit'>Contact Our Sales</button>
+            <Link to='/contact'><button type='submit'>Contact Us</button></Link>
           </section>
           <section className='testimonials'>
             <h2>Testimonials</h2>

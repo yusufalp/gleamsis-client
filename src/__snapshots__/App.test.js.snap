@@ -151,11 +151,16 @@ exports[`App component renders the UI as expected 1`] = `
         <h2>
           Want to learn more
         </h2>
-        <button
-          type="submit"
+        <a
+          href="/contact"
+          onClick={[Function]}
         >
-          Contact Our Sales
-        </button>
+          <button
+            type="submit"
+          >
+            Contact Us
+          </button>
+        </a>
       </section>
       <section
         className="testimonials"
