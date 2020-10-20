@@ -38,24 +38,28 @@ exports[`App component renders the UI as expected 1`] = `
         Home
       </a>
       <a
+        aria-current={null}
         href="/demo"
         onClick={[Function]}
       >
         Demo
       </a>
       <a
+        aria-current={null}
         href="/pricing"
         onClick={[Function]}
       >
         Pricing
       </a>
       <a
+        aria-current={null}
         href="/about"
         onClick={[Function]}
       >
         About
       </a>
       <a
+        aria-current={null}
         href="/contact"
         onClick={[Function]}
       >
@@ -145,7 +149,7 @@ exports[`App component renders the UI as expected 1`] = `
       <img
         alt=""
         className="banner"
-        src="images/banner4.png"
+        src="images/lastbanner6.png"
       />
       <section>
         <h2>

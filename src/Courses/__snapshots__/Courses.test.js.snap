@@ -29,15 +29,12 @@ exports[`Courses component renders the UI as expected 1`] = `
   >
     No students are registered for this class
   </p>
-  <button
-    type="submit"
+  <a
+    className="btn-add"
+    href="/add-student"
+    onClick={[Function]}
   >
-    <a
-      href="/add-student"
-      onClick={[Function]}
-    >
-      Add Student
-    </a>
-  </button>
+    Add Student
+  </a>
 </div>
 `;
