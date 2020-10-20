@@ -17,6 +17,7 @@ import AddCourse from './Forms/AddCourse';
 import Success from './Confirmation/Success';
 import Deleted from './Confirmation/Deleted';
 import Page404 from './Page404/Page404';
+import Footer from './Footer/Footer';
 
 import DataContext from './DataContext';
 
@@ -230,6 +231,7 @@ class App extends React.Component {
               component={Page404}
             />
           </Switch>
+          <Footer />
         </DataContext.Provider>
       </div>
     );

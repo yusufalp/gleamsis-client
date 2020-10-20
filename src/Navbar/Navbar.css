@@ -6,6 +6,12 @@ nav a:visited {
   text-decoration: none;
 }
 
+/* nav {
+  background-image: url('/images/banner3.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+} */
+
 .logo {
   display: inline;
   font-size: 40px;
@@ -43,7 +49,7 @@ nav a:visited {
   opacity: 1;
 }
 
-@media all and (min-width: 850px) {
+@media all and (min-width: 650px) {
   .menu-toggler {
     display: none;
     font-size: 54px;
@@ -54,8 +60,6 @@ nav a:visited {
     position: absolute;
     right: 8px;
     top: 42px;
-    margin: auto;
-    text-align: right;
   }
 
   .navbar-links a {
