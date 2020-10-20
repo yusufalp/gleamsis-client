@@ -6,15 +6,14 @@ nav a:visited {
   text-decoration: none;
 }
 
-/* nav {
-  background-image: url('/images/banner3.png');
-  background-repeat: no-repeat;
-  background-size: 100%;
-} */
+nav {
+  padding-right: 20px;
+}
 
 .logo {
   display: inline;
   font-size: 40px;
+  padding-left: 18px;
 }
 
 .menu-toggler {
@@ -36,7 +35,7 @@ nav a:visited {
   text-decoration: underline;
 }
 
-.navbar-links a:focus {
+.navbar-links .active {
   color: #FF0022;
   text-decoration: none;
 }
@@ -45,7 +44,7 @@ nav a:visited {
   opacity: 0;
 }
 
-.logo-part:hover{
+.logo-part:hover {
   opacity: 1;
 }
 

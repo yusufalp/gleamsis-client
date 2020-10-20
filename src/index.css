@@ -1,12 +1,13 @@
 body {
   margin: 0;
+  color: #011627;
   background-color: #EEF0F2;
   font-family: 'Barlow', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('/images/banner3.png');
+  background-image: url('/images/banner6.png');
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -14,7 +15,7 @@ body {
 header {
   width: 90%;
   text-align: center;
-  margin: 90px auto;
+  margin: 120px auto;
 }
 
 .dash {
@@ -61,6 +62,26 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
+  box-shadow: 2px 0 12px #66CFFC;
+  transform: scale(1.1);
+}
+
+.btn-add {
+  color: black;
+  text-decoration: none;
+  border: none;
+  background-color: #66CFFC;
+  font-size: 18px;
+  border-radius: 10px;
+  display: block;
+  max-width: 240px;
+  width: 50%;
+  margin: 18px auto 0;
+  padding: 6px;
+  text-align: center;
+}
+
+.btn-add:hover {
   box-shadow: 2px 0 12px #66CFFC;
   transform: scale(1.1);
 }
