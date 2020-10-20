@@ -48,29 +48,33 @@ class AddStudent extends React.Component {
   render() {
     return (
       <div>
-        <h2>Add a Student</h2>
+        <header>
+          <h2>Add a Student</h2>
+        </header>
         <p className='add-info'>
           Use the form below to add a student. You must add a student to a current course. If the course
           does not exist, <Link to={'/add-course'}>add the course</Link> first.
         </p>
         <form onSubmit={e => this.handleStudentSubmit(e)}>
-          <label htmlFor='firstName'>First Name*</label>
+          <label htmlFor='firstName'></label>
           <input
             type='text'
             name='firstName'
             id='firstName'
             onChange={e => this.handleStudentFName(e.target.value)}
+            placeholder='First Name'
             required
           />
-          <label htmlFor='lastName'>Last Name*</label>
+          <label htmlFor='lastName'></label>
           <input
             type='text'
             name='lastName'
             id='lastName'
             onChange={e => this.handleStudentLName(e.target.value)}
+            placeholder='Last Name'
             required
           />
-          <label htmlFor='course'>Courses*</label>
+          <label htmlFor='course'></label>
           <select
             name='course'
             id='grade'
@@ -81,7 +85,7 @@ class AddStudent extends React.Component {
               <option key={i} value={course.id}>{course.name}</option>
             )}
           </select>
-          <label htmlFor='grade'>Grade*</label>
+          <label htmlFor='grade'></label>
           <select
             type='text'
             name='grade'

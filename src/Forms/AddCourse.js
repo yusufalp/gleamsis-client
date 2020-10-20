@@ -28,11 +28,11 @@ class AddCourse extends React.Component {
   handleCourseSubmit(e) {
     e.preventDefault()
 
-    if(!this.state.name || !this.state.category || !this.state.teacherId){
+    if (!this.state.name || !this.state.category || !this.state.teacherId) {
       this.setState({
-        error : "Name, category and teacher are required"
-        })
-        return
+        error: "Name, category and teacher are required"
+      })
+      return
     }
 
     let newCourse = {
@@ -48,29 +48,33 @@ class AddCourse extends React.Component {
   render() {
     return (
       <div>
-        <h2>Add a Course</h2>
+        <header>
+          <h2>Add a Course</h2>
+        </header>
         <p className='add-info'>
           Use the form below to add a course. You must add a course if there is a teacher to teach it.
           If the teacher does not exist, <Link to={'/add-teacher'}>add the teacher</Link> first.
       </p>
         <form onSubmit={e => this.handleCourseSubmit(e)}>
-          <label htmlFor='name'>Course Name*</label>
+          <label htmlFor='name'></label>
           <input
             type='text'
             name='name'
             id='name'
             onChange={e => this.handleCourseName(e.target.value)}
+            placeholder='Course Name'
             required
           />
-          <label htmlFor='category'>Category*</label>
+          <label htmlFor='category'></label>
           <input
             type='text'
             name='category'
             id='category'
             onChange={e => this.handleCourseCategory(e.target.value)}
+            placeholder='Category'
             required
           />
-          <label htmlFor='teacher'>Teacher*</label>
+          <label htmlFor='teacher'></label>
           <select
             name='teacher'
             id='teacher'

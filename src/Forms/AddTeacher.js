@@ -42,22 +42,26 @@ class AddTeacher extends React.Component {
   render() {
     return (
       <div>
-        <h2>Add a Teacher</h2>
+        <header>
+          <h2>Add a Teacher</h2>
+        </header>
         <form onSubmit={e => this.handleTeacherSubmit(e)}>
-          <label htmlFor='firstName'>First Name*</label>
+          <label htmlFor='firstName'></label>
           <input
             type='text'
             name='firstName'
             id='firstName'
             onChange={e => this.handleTeacherFName(e.target.value)}
+            placeholder='First Name'
             required
           />
-          <label htmlFor='lastName'>Last Name*</label>
+          <label htmlFor='lastName'></label>
           <input
             type='text'
             name='lastName'
             id='lastName'
             onChange={e => this.handleTeacherLName(e.target.value)}
+            placeholder='Last Name'
             required
           />
           <button type="submit">Add Teacher</button>
