@@ -17,6 +17,11 @@ header {
   margin: 90px auto;
 }
 
+.dash {
+  width: 90%;
+  margin: 90px auto;
+}
+
 form {
   text-align: left;
   width: 90%;
@@ -60,13 +65,9 @@ button[type="submit"]:hover {
   transform: scale(1.1);
 }
 
-.btn-teacher,
-.btn-student {
-  border: 1px solid black;
-  border-radius: 10px;
-  background-color: bisque;
-  text-decoration: none;
-  padding: 6px;
+.form-link {
+  color: #FF0022;
+  text-transform: uppercase;
 }
 
 ul {
@@ -77,6 +78,10 @@ ul {
 
 li {
   padding-bottom: 6px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .required {
@@ -119,11 +124,16 @@ td {
   flex-direction: column;
 }
 
-.group3 {
+.group3,
+.group4 {
   display: flex;
   flex-direction: column;
   padding: 0 10%;
   justify-content: space-around;
+}
+
+.group4 {
+  align-items: center;
 }
 
 .item {
@@ -133,9 +143,14 @@ td {
 }
 
 .item-pricing {
-  margin: 0 2%;
+  border-right: none;
+  border-left: none;
+  border-top: 1px solid;
+  margin: 10px 2%;
+  height: 300px;
   text-align: center;
-  width: 50%;
+  width: 80%;
+  position: relative;
 }
 
 .item-pricing p {
@@ -184,12 +199,27 @@ h2,
     width: 80%;
   }
 
-  .group3 {
+  .group3,
+  .group4 {
     flex-direction: row;
+    align-items: flex-start;
   }
 
-  .item {
+  .item,
+  .item-pricing {
     width: 50%;
   }
 
+  .item-pricing {
+    border-right: 1px solid;
+    border-left: 1px solid;
+    border-top: none;
+    border-bottom: none;
+  }
+
+  .btn-price {
+    position: absolute;
+    bottom: 12px;
+    left: 25%;
+  }
 }
