@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class Pricing extends React.Component {
   render() {
@@ -11,7 +12,7 @@ class Pricing extends React.Component {
           </p>
         </header>
         <main>
-          <div className="group">
+          <div className="group4">
             <section className="item-pricing">
               <h3>Individual Schools</h3>
               <p>
@@ -23,7 +24,7 @@ class Pricing extends React.Component {
                 <li>24/7 phone support</li>
                 <li>One-Time set up fee</li>
               </ul>
-              <button type="submit">Request a quote</button>
+              <button className='btn-price' type="submit"><Link to='/demo'>Demo GleamSIS</Link></button>
             </section>
             <section className="item-pricing">
               <h3>Districts</h3>
@@ -36,14 +37,14 @@ class Pricing extends React.Component {
                 <li>24/7 phone and online chat support</li>
                 <li>No set up fee</li>
               </ul>
-              <button type="submit">Request a quote</button>
+              <button className='btn-price' type="submit"><Link to='/contact'>Request a qoute</Link></button>
             </section>
             <section className="item-pricing">
               <h3>Enterprise</h3>
               <p>
                 Contact us for a personalized offer
               </p>
-              <button type="submit">Contact</button>
+              <button className='btn-price' type="submit"><Link to='/contact'>Contact</Link></button>
             </section>
           </div>
         </main>
