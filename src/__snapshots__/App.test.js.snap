@@ -149,7 +149,7 @@ exports[`App component renders the UI as expected 1`] = `
       <img
         alt=""
         className="banner"
-        src="images/lastbanner6.png"
+        src="images/banner3.png"
       />
       <section>
         <h2>
