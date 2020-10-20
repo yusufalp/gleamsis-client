@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component renders the UI as expected 1`] = `
+<nav>
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    <p
+      className="logo"
+    >
+      G
+      <span
+        className="logo-part"
+      >
+        leamSIS
+      </span>
+    </p>
+  </a>
+  <button
+    className="menu-toggler"
+    onClick={[Function]}
+  >
+    <i
+      className="fas fa-chevron-circle-down"
+    />
+  </button>
+  <div
+    className="navbar-links open-menu"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+    <a
+      href="/demo"
+      onClick={[Function]}
+    >
+      Demo
+    </a>
+    <a
+      href="/pricing"
+      onClick={[Function]}
+    >
+      Pricing
+    </a>
+    <a
+      href="/about"
+      onClick={[Function]}
+    >
+      About
+    </a>
+    <a
+      href="/contact"
+      onClick={[Function]}
+    >
+      Contact
+    </a>
+  </div>
+</nav>
+`;

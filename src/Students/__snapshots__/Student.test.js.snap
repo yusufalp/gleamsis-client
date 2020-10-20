@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Student component renders the UI as expected 1`] = `
+<div
+  className="dash"
+>
+  <h3>
+    Hello admin,
+  </h3>
+  <p>
+    This is 
+     
+    's information
+  </p>
+  <p>
+    First Name: 
+  </p>
+  <p>
+    Last Name: 
+  </p>
+  <p>
+    Courses enrolled: 
+  </p>
+  <button
+    onClick={[Function]}
+    type="submit"
+  >
+    Delete Student
+  </button>
+  <div
+    className="hidden"
+  >
+    <p>
+      
+    </p>
+    <button
+      onClick={[Function]}
+    >
+      Yes
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      No
+    </button>
+  </div>
+</div>
+`;

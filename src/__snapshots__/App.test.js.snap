@@ -1,0 +1,246 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component renders the UI as expected 1`] = `
+<div
+  className="App"
+>
+  <nav>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <p
+        className="logo"
+      >
+        G
+        <span
+          className="logo-part"
+        >
+          leamSIS
+        </span>
+      </p>
+    </a>
+    <button
+      className="menu-toggler"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-chevron-circle-down"
+      />
+    </button>
+    <div
+      className="navbar-links open-menu"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Home
+      </a>
+      <a
+        href="/demo"
+        onClick={[Function]}
+      >
+        Demo
+      </a>
+      <a
+        href="/pricing"
+        onClick={[Function]}
+      >
+        Pricing
+      </a>
+      <a
+        href="/about"
+        onClick={[Function]}
+      >
+        About
+      </a>
+      <a
+        href="/contact"
+        onClick={[Function]}
+      >
+        Contact
+      </a>
+    </div>
+  </nav>
+  <div>
+    <header>
+      <h1>
+        GleamSIS
+      </h1>
+      <p>
+        Welcome to GleamSIS. Your one stop student information system.
+      </p>
+    </header>
+    <main>
+      <section
+        className="group"
+      >
+        <div
+          className="item"
+        >
+          <h2>
+            All you need is in one place
+          </h2>
+          <p>
+            You can search for your teachers, students and courses in one place.
+          </p>
+        </div>
+        <div
+          className="item"
+        >
+          <img
+            alt=""
+            className="home-pic"
+            src="images/gleam3.png"
+          />
+        </div>
+      </section>
+      <section
+        className="group2"
+      >
+        <div
+          className="item"
+        >
+          <h2>
+            Access your data with ease
+          </h2>
+          <p>
+            With visual data display, you can easily see your Gleam usage.
+          </p>
+        </div>
+        <div
+          className="item"
+        >
+          <img
+            alt=""
+            className="home-pic"
+            src="images/gleam2.png"
+          />
+        </div>
+      </section>
+      <section
+        className="group"
+      >
+        <div
+          className="item"
+        >
+          <h2>
+            Provide your staff great experience
+          </h2>
+          <p>
+            Improve your staff's performance and let them manage their time effectively
+          </p>
+        </div>
+        <div
+          className="item"
+        >
+          <img
+            alt=""
+            className="home-pic"
+            src="images/gleam4.png"
+          />
+        </div>
+      </section>
+      <img
+        alt=""
+        className="banner"
+        src="images/banner4.png"
+      />
+      <section>
+        <h2>
+          Want to learn more
+        </h2>
+        <button
+          type="submit"
+        >
+          Contact Our Sales
+        </button>
+      </section>
+      <section
+        className="testimonials"
+      >
+        <h2>
+          Testimonials
+        </h2>
+        <div>
+          <blockquote
+            cite="https://www.huxley.net/bnw/four.html"
+          >
+            <p
+              className="quote"
+            >
+              Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.
+            </p>
+            <p>
+              —Aldous Huxley,
+               
+              <cite>
+                Brave New World
+              </cite>
+            </p>
+          </blockquote>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div
+    className="footer"
+  >
+    <div
+      className="group3"
+    >
+      <div
+        className="item-footer"
+      >
+        <h3>
+          GleamSIS
+        </h3>
+        <p>
+          123 Sesame St,
+        </p>
+        <p>
+          San Francisco, CA 94105
+        </p>
+        <p>
+          415-123-4567
+        </p>
+      </div>
+      <div
+        className="item-footer"
+      >
+        <h4>
+          Company
+        </h4>
+        <p>
+          About
+        </p>
+        <p>
+          Careers
+        </p>
+        <p>
+          Media
+        </p>
+      </div>
+      <div
+        className="item-footer"
+      >
+        <h4>
+          Solutions
+        </h4>
+        <p>
+          Information Systems
+        </p>
+        <p>
+          Management Systems
+        </p>
+      </div>
+    </div>
+    <p
+      className="copy"
+    >
+      Copyrights © Yusuf Alp 2020
+    </p>
+  </div>
+</div>
+`;
