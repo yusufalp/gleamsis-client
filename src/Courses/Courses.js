@@ -9,8 +9,8 @@ class Courses extends React.Component {
     let teacher = this.context.teachers.find(teacher => teacher.id === course.teacher_id) || {}
     let students = this.context.students.filter(students => students.course_id === course.id)
     return (
-      <div>
-        <h3>Hello {teacher.first_name}, this is {course.name} class</h3>
+      <div className='dash'>
+          <h3>Hello {teacher.first_name}, this is {course.name} class</h3>
         <table>
           <thead>
             <tr>
@@ -30,7 +30,7 @@ class Courses extends React.Component {
           )}
         </table>
         <p className={`${students.length === 0 ? "" : "hidden"}`}>No students are registered for this class</p>
-        <Link to={'/add-student'} className="btn-teacher">Add Student</Link>
+        <button type='submit'><Link to={'/add-student'}>Add Student</Link></button>
       </div>
     )
   }

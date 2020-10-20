@@ -10,7 +10,9 @@ class Dashboard extends React.Component {
   render() {
     return (
       <div>
-        <h2>Welcome to your Dashboard</h2>
+        <header>
+          <h2>Welcome to your Dashboard</h2>
+        </header>
         <div className="group">
           <div className="item-dash">
             <h3>Messages</h3>
@@ -40,8 +42,8 @@ class Dashboard extends React.Component {
 
               </tbody>
             </table>
-            <Link to={'/add-teacher'} className="btn-teacher">Add Teacher</Link>
-            <Link to={'/add-course'} className="btn-teacher">Add Course</Link>
+            <button type='submit'><Link to={'/add-teacher'}>Add Teacher</Link></button>
+            <button type='submit'><Link to={'/add-course'}>Add Course</Link></button>
           </div>
         </div>
       </div>
