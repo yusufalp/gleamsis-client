@@ -48,7 +48,7 @@ class Home extends React.Component {
               <img className='home-pic' src="images/gleam4.png" alt=""></img>
             </div>
           </section>
-          <img className='banner' src='images/banner4.png' alt=''></img>
+          <img className='banner' src='images/banner3.png' alt=''></img>
           <section>
             <h2>Want to learn more</h2>
             <Link to='/contact'><button type='submit'>Contact Us</button></Link>

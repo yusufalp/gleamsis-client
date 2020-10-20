@@ -1,6 +1,6 @@
 import React from 'react';
 import './Navbar.css'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 class Navbar extends React.Component {
   state = {
@@ -21,12 +21,12 @@ class Navbar extends React.Component {
         ><i className="fas fa-chevron-circle-down"></i>
         </button>
         <div
-          className={`navbar-links ${this.state.menuVisible ? "open-menu":""}`}>
+          className={`navbar-links ${this.state.menuVisible ? "open-menu" : ""}`}>
           <Link to="/">Home</Link>
-          <Link to="/demo">Demo</Link>
-          <Link to="/pricing">Pricing</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
+          <NavLink to="/demo">Demo</NavLink>
+          <NavLink to="/pricing">Pricing</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </div>
       </nav>
     )

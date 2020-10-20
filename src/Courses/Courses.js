@@ -30,7 +30,7 @@ class Courses extends React.Component {
           )}
         </table>
         <p className={`${students.length === 0 ? "" : "hidden"}`}>No students are registered for this class</p>
-        <button type='submit'><Link to={'/add-student'}>Add Student</Link></button>
+        <Link to={'/add-student'} className='btn-add'>Add Student</Link>
       </div>
     )
   }
