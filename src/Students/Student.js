@@ -38,8 +38,8 @@ class Student extends React.Component {
       enrolledCourses.push(courseObj)
     }
     return (
-      <div>
-        <h2>Hello admin,</h2>
+      <div className='dash'>
+          <h3>Hello admin,</h3>
         <p>This is {student.first_name} {student.last_name}'s information</p>
         <p>First Name: {student.first_name}</p>
         <p>Last Name: {student.last_name}</p>
@@ -47,7 +47,7 @@ class Student extends React.Component {
         {enrolledCourses.map((course, i) =>
           <p key={i}><Link to={`/courses/${course.id}`}>{course.name}</Link></p>
         )}
-        <button className='btn-teacher' onClick={e => this.handleConfirmStudent(student)}>Delete Student</button>
+        <button type='submit' onClick={e => this.handleConfirmStudent(student)}>Delete Student</button>
 
         <div className={`${this.state.confirm ? "" : "hidden"}`}>
           <p >{this.state.message}</p>

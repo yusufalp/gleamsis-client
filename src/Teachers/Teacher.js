@@ -30,7 +30,7 @@ class Teacher extends React.Component {
     let teacher = this.context.teachers.find(teacher => teacher.id === Number(this.props.match.params.id)) || {}
     let courses = this.context.courses.filter(course => course.teacher_id === teacher.id)
     return (
-      <div>
+      <div className='dash'>
         <h2>Hello admin,</h2>
         <p>This is {teacher.first_name} {teacher.last_name}'s information</p>
         <p>First Name: {teacher.first_name}</p>
@@ -40,7 +40,8 @@ class Teacher extends React.Component {
           <p key={i}><Link to={`/courses/${course.id}`}>{course.name}</Link></p>
         )}
         <button
-          className={`btn-teacher ${teacher.id === 0 ? "hidden" : ""}`}
+          type='submit'
+          className={`${teacher.id === 0 ? "hidden" : ""}`}
           onClick={e => this.handleDeleteTeacher(teacher)}>Delete Teacher</button>
         <div className={`${this.state.confirm ? "" : "hidden"}`}>
           <p>{this.state.message}</p>
