@@ -37,8 +37,6 @@ class AddTeacher extends React.Component {
     }
 
     this.context.addTeacher(newTeacher);
-
-    this.props.history.push("/success");
   }
   render() {
     return (

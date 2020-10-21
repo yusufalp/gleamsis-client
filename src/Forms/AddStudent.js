@@ -42,8 +42,6 @@ class AddStudent extends React.Component {
     }
 
     this.context.addStudent(newStudent);
-
-    this.props.history.push('/success');
   }
   render() {
     return (

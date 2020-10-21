@@ -43,8 +43,6 @@ class AddCourse extends React.Component {
     }
 
     this.context.addCourse(newCourse);
-
-    this.props.history.push('/success');
   }
   render() {
     return (
