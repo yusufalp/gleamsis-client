@@ -5,9 +5,11 @@ class Deleted extends React.Component {
   render() {
     return (
       <div>
-        <h2>Deleted Successfully</h2>
-        <Link to={'/dashboard'}>Go to dashboard</Link>
-      </div>
+        <header>
+          <h2>Deleted Successfully</h2>
+          <Link to={'/dashboard'}>Go to dashboard</Link>
+        </header>
+      </div >
     )
   }
 }
