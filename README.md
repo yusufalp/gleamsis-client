@@ -13,10 +13,10 @@ Live web is hosted on Vercel
 
 ## Screenshots
 ### Home Page
-![Home Page](https://ibb.co/7C0HyWp)
+![Home Page](https://i.ibb.co/PjVRChW/home-page.png)
 
 ### Login Page
-![Login Page](https://ibb.co/x1fB2cw)
+![Login Page](https://i.ibb.co/wSwPdb8/login-page.png)
 
 ### Dashboard Page
-![Dashboard Page](https://ibb.co/R9Zp5G7)
+![Dashboard Page](https://i.ibb.co/vHgxtCD/dash-page.png)
