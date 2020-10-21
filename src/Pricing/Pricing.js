@@ -24,7 +24,7 @@ class Pricing extends React.Component {
                 <li>24/7 phone support</li>
                 <li>One-Time set up fee</li>
               </ul>
-              <button className='btn-price' type="submit"><Link to='/demo'>Demo GleamSIS</Link></button>
+              <Link to='/demo' className='btn-add'>Demo GleamSIS</Link>
             </section>
             <section className="item-pricing">
               <h3>Districts</h3>
@@ -37,14 +37,14 @@ class Pricing extends React.Component {
                 <li>24/7 phone and online chat support</li>
                 <li>No set up fee</li>
               </ul>
-              <button className='btn-price' type="submit"><Link to='/contact'>Request a qoute</Link></button>
+              <Link to='/contact' className='btn-add'>Request a qoute</Link>
             </section>
             <section className="item-pricing">
               <h3>Enterprise</h3>
               <p>
                 Contact us for a personalized offer
               </p>
-              <button className='btn-price' type="submit"><Link to='/contact'>Contact</Link></button>
+              <Link to='/contact' className='btn-add'>Contact</Link>
             </section>
           </div>
         </main>

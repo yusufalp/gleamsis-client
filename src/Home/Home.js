@@ -51,7 +51,7 @@ class Home extends React.Component {
           <img className='banner' src='images/banner3.png' alt=''></img>
           <section>
             <h2>Want to learn more</h2>
-            <Link to='/contact'><button type='submit'>Contact Us</button></Link>
+            <Link to='/contact' className='btn-add'>Contact Us</Link>
           </section>
           <section className='testimonials'>
             <h2>Testimonials</h2>

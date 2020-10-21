@@ -42,8 +42,8 @@ class Dashboard extends React.Component {
 
               </tbody>
             </table>
-            <button type='submit'><Link to={'/add-teacher'}>Add Teacher</Link></button>
-            <button type='submit'><Link to={'/add-course'}>Add Course</Link></button>
+            <Link to={'/add-teacher'} className='btn-add'>Add Teacher</Link>
+            <Link to={'/add-course'} className='btn-add'>Add Course</Link>
           </div>
         </div>
       </div>
