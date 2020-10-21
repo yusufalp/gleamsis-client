@@ -18,7 +18,7 @@ class Home extends React.Component {
             <div className='item'>
               <h2>All you need is in one place</h2>
               <p>
-                You can search for your teachers, students and courses
+                You can use information for your teachers, students and courses
                 in one place.
             </p>
             </div>

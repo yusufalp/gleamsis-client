@@ -201,6 +201,17 @@ h2,
   display: none;
 }
 
+.delete-message {
+  border: 1px solid #FF0022;
+  border-radius: 10px;
+  padding: 8px;
+  margin: 8px auto;
+}
+
+.btn-delete {
+  background-color: #FF0022;
+}
+
 @media all and (min-width: 650px) {
   header {
     width: 50%;
