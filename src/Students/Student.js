@@ -15,7 +15,7 @@ class Student extends React.Component {
     })
   }
   handleConfirmDelete = (student) => {
-    this.context.deleteStudent(student)
+    this.context.deleteStudent(student);
     this.setState({
       confirm: false
     })

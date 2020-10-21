@@ -23,6 +23,7 @@ class AddTeacher extends React.Component {
     let newTeacherFName = this.state.firstName;
     let newTeacherLName = this.state.lastName;
 
+    // Checks if the required information is entered
     if (!newTeacherFName || !newTeacherLName) {
       this.setState({
         error: 'Teacher first and last name are required'

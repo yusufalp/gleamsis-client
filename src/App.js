@@ -128,6 +128,8 @@ class App extends React.Component {
       }
     })
       .then(() => {
+        // When deleting a teacher, all the courses the teacher teaching
+        // must be deleted too.
         this.getTeachers();
         this.getCourses();
         this.props.history.push('/deleted');
@@ -166,7 +168,7 @@ class App extends React.Component {
           <Navbar />
           <Switch>
             <Route
-              exact path='ß/'
+              exact path='/'
               component={Home}
             />
             <Route

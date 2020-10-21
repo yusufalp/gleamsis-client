@@ -23,20 +23,24 @@ class Demo extends React.Component {
     let username = this.state.username;
     let password = this.state.password;
 
-    if (username.toLowerCase() !== 'admin'){
+    // Currently there is one user, and if that username is not entered,
+    // they won't be logged in
+    if (username.toLowerCase() !== 'admin') {
       this.setState({
         error: 'Username does not exist'
       })
       return;
     }
 
-      if (!username.toLowerCase() || !password) {
-        this.setState({
-          error: 'Username and password are required'
-        })
-        return;
-      }
+    // Checks if the required values are entered
+    if (!username.toLowerCase() || !password) {
+      this.setState({
+        error: 'Username and password are required'
+      })
+      return;
+    }
 
+    // To demo the product, this is the only account to log in
     if (username.toLowerCase() !== 'admin' || password !== 'password') {
       this.setState({
         error: 'Username and password does not match'

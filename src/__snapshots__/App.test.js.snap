@@ -68,9 +68,127 @@ exports[`App component renders the UI as expected 1`] = `
     </div>
   </nav>
   <div>
-    <h1>
-      Page not found
-    </h1>
+    <header>
+      <h1>
+        GleamSIS
+      </h1>
+      <p>
+        Welcome to GleamSIS. Your one stop student information system.
+      </p>
+    </header>
+    <main>
+      <section
+        className="group"
+      >
+        <div
+          className="item"
+        >
+          <h2>
+            All you need is in one place
+          </h2>
+          <p>
+            You can search for your teachers, students and courses in one place.
+          </p>
+        </div>
+        <div
+          className="item"
+        >
+          <img
+            alt=""
+            className="home-pic"
+            src="images/gleam3.png"
+          />
+        </div>
+      </section>
+      <section
+        className="group2"
+      >
+        <div
+          className="item"
+        >
+          <h2>
+            Access your data with ease
+          </h2>
+          <p>
+            With visual data display, you can easily see your Gleam usage.
+          </p>
+        </div>
+        <div
+          className="item"
+        >
+          <img
+            alt=""
+            className="home-pic"
+            src="images/gleam2.png"
+          />
+        </div>
+      </section>
+      <section
+        className="group"
+      >
+        <div
+          className="item"
+        >
+          <h2>
+            Provide your staff great experience
+          </h2>
+          <p>
+            Improve your staff's performance and let them manage their time effectively
+          </p>
+        </div>
+        <div
+          className="item"
+        >
+          <img
+            alt=""
+            className="home-pic"
+            src="images/gleam4.png"
+          />
+        </div>
+      </section>
+      <img
+        alt=""
+        className="banner"
+        src="images/banner3.png"
+      />
+      <section>
+        <h2>
+          Want to learn more
+        </h2>
+        <a
+          className="btn-add"
+          href="/contact"
+          onClick={[Function]}
+        >
+          Contact Us
+        </a>
+      </section>
+      <section
+        className="testimonials"
+      >
+        <h2>
+          Testimonials
+        </h2>
+        <div>
+          <blockquote
+            cite="https://www.huxley.net/bnw/four.html"
+          >
+            <p
+              className="quote"
+            >
+              GleamSIS has saved us more than half of the time we used to spend organizing data about our students, parents and teachers. Now with a few clicks we can access it right away. User friendly, practical and just exactly what we need.
+            </p>
+            <p>
+              —Sevde Meva Alp,
+               
+              <cite>
+                Principal at That School
+              </cite>
+            </p>
+          </blockquote>
+        </div>
+      </section>
+    </main>
   </div>
   <div
     className="footer"

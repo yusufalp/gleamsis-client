@@ -28,6 +28,7 @@ class AddCourse extends React.Component {
   handleCourseSubmit(e) {
     e.preventDefault();
 
+    // Checks if the required information is entered to create a new course
     if (!this.state.name || !this.state.category || !this.state.teacherId) {
       this.setState({
         error: 'Name, category and teacher are required'
