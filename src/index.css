@@ -145,15 +145,17 @@ td {
   flex-direction: column;
 }
 
-.group3,
+.group3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .group4 {
   display: flex;
   flex-direction: column;
   padding: 0 10%;
   justify-content: space-around;
-}
-
-.group4 {
   align-items: center;
 }
 

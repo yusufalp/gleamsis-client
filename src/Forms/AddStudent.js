@@ -41,9 +41,9 @@ class AddStudent extends React.Component {
       grade: this.state.grade
     }
 
-    this.context.addStudent(newStudent)
+    this.context.addStudent(newStudent);
 
-    this.props.history.push('/success')
+    this.props.history.push('/success');
   }
   render() {
     return (
@@ -80,7 +80,7 @@ class AddStudent extends React.Component {
             id='grade'
             required
             onChange={e => this.handleCourseId(e.target.value)}>
-            <option value="">Select a Course</option>
+            <option value=''>Select a Course</option>
             {this.context.courses.map((course, i) =>
               <option key={i} value={course.id}>{course.name}</option>
             )}
@@ -92,14 +92,14 @@ class AddStudent extends React.Component {
             id='grade'
             required
             onChange={e => this.handleGrade(e.target.value)}>
-            <option value="">Select a Grade</option>
+            <option value=''>Select a Grade</option>
             {['A', 'B', 'C', 'D', 'F'].map((grade, i) =>
               <option key={i}>{grade}</option>
             )}
           </select>
-          <button type="submit">Add Student</button>
+          <button type='submit'>Add Student</button>
           <p>{this.state.error}</p>
-          <p className="required">* = required fields</p>
+          <p className='required'>* = required fields</p>
         </form>
       </div>
     )

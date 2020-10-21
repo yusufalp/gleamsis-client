@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import DataContext from '../DataContext';
 
 class AddCourse extends React.Component {
-  static contextType = DataContext
+  static contextType = DataContext;
   state = {
     name: '',
     category: '',
@@ -26,13 +26,13 @@ class AddCourse extends React.Component {
     })
   }
   handleCourseSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
 
     if (!this.state.name || !this.state.category || !this.state.teacherId) {
       this.setState({
-        error: "Name, category and teacher are required"
+        error: 'Name, category and teacher are required'
       })
-      return
+      return;
     }
 
     let newCourse = {
@@ -41,9 +41,9 @@ class AddCourse extends React.Component {
       teacher_id: Number(this.state.teacherId)
     }
 
-    this.context.addCourse(newCourse)
+    this.context.addCourse(newCourse);
 
-    this.props.history.push('/success')
+    this.props.history.push('/success');
   }
   render() {
     return (
@@ -80,14 +80,14 @@ class AddCourse extends React.Component {
             id='teacher'
             required
             onChange={e => this.handleTeacherId(e.target.value)}>
-            <option value="">Select a Teacher</option>
+            <option value=''>Select a Teacher</option>
             {this.context.teachers.map((teacher, i) =>
               <option key={i} value={teacher.id}>{teacher.first_name} {teacher.last_name}</option>
             )}
           </select>
-          <button type="submit">Add Course</button>
+          <button type='submit'>Add Course</button>
           <p>{this.state.error}</p>
-          <p className="required">* = required fields</p>
+          <p className='required'>* = required fields</p>
         </form>
       </div>
     )

@@ -15,7 +15,7 @@ class Teacher extends React.Component {
     })
   }
   handleConfirmTeacher = (teacher) => {
-    this.context.deleteTeacher(teacher)
+    this.context.deleteTeacher(teacher);
     this.setState({
       confirm: false
     })
@@ -27,8 +27,8 @@ class Teacher extends React.Component {
   }
 
   render() {
-    let teacher = this.context.teachers.find(teacher => teacher.id === Number(this.props.match.params.id)) || {}
-    let courses = this.context.courses.filter(course => course.teacher_id === teacher.id)
+    let teacher = this.context.teachers.find(teacher => teacher.id === Number(this.props.match.params.id)) || {};
+    let courses = this.context.courses.filter(course => course.teacher_id === teacher.id);
     return (
       <div className='dash'>
         <h2>Hello admin,</h2>
@@ -41,9 +41,9 @@ class Teacher extends React.Component {
         )}
         <button
           type='submit'
-          className={`${teacher.id === 0 ? "hidden" : ""}`}
+          className={`${teacher.id === 0 ? 'hidden' : ''}`}
           onClick={e => this.handleDeleteTeacher(teacher)}>Delete Teacher</button>
-        <div className={`${this.state.confirm ? "" : "hidden"}`}>
+        <div className={`${this.state.confirm ? '' : 'hidden'}`}>
           <p>{this.state.message}</p>
           <button onClick={e => this.handleConfirmTeacher(teacher)}>Yes</button>
           <button onClick={this.handleCancelTeacher}>No</button>

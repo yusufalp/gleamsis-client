@@ -19,7 +19,7 @@ class Student extends React.Component {
     this.setState({
       confirm: false
     })
-    this.props.history.push('/deleted')
+    this.props.history.push('/deleted');
   }
   handleCancelDelete = () => {
     this.setState({
@@ -28,14 +28,14 @@ class Student extends React.Component {
   }
 
   render() {
-    let student = this.context.students.find(student => student.id === Number(this.props.match.params.id)) || {}
-    let courses = this.context.students.filter(course => course.first_name === student.first_name)
+    let student = this.context.students.find(student => student.id === Number(this.props.match.params.id)) || {};
+    let courses = this.context.students.filter(course => course.first_name === student.first_name);
     let courseIndex = [];
-    let enrolledCourses = []
-    courses.forEach(courses => courseIndex.push(courses.course_id))
+    let enrolledCourses = [];
+    courses.forEach(courses => courseIndex.push(courses.course_id));
     for (let i = 0; i < courseIndex.length; i++) {
-      let courseObj = this.context.courses.find(course => Number(course.id) === Number(courseIndex[i]))
-      enrolledCourses.push(courseObj)
+      let courseObj = this.context.courses.find(course => Number(course.id) === Number(courseIndex[i]));
+      enrolledCourses.push(courseObj);
     }
     return (
       <div className='dash'>
@@ -49,7 +49,7 @@ class Student extends React.Component {
         )}
         <button type='submit' onClick={e => this.handleConfirmStudent(student)}>Delete Student</button>
 
-        <div className={`${this.state.confirm ? "" : "hidden"}`}>
+        <div className={`${this.state.confirm ? '' : 'hidden'}`}>
           <p >{this.state.message}</p>
           <button onClick={e => this.handleConfirmDelete(student)}>Yes</button>
           <button onClick={this.handleCancelDelete}>No</button>

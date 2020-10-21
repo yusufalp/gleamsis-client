@@ -12,8 +12,8 @@ class Pricing extends React.Component {
           </p>
         </header>
         <main>
-          <div className="group4">
-            <section className="item-pricing">
+          <div className='group4'>
+            <section className='item-pricing'>
               <h3>Individual Schools</h3>
               <p>
                 Small size schools
@@ -26,7 +26,7 @@ class Pricing extends React.Component {
               </ul>
               <Link to='/demo' className='btn-add'>Demo GleamSIS</Link>
             </section>
-            <section className="item-pricing">
+            <section className='item-pricing'>
               <h3>Districts</h3>
               <p>
                 Larger or multiple schools
@@ -39,7 +39,7 @@ class Pricing extends React.Component {
               </ul>
               <Link to='/contact' className='btn-add'>Request a qoute</Link>
             </section>
-            <section className="item-pricing">
+            <section className='item-pricing'>
               <h3>Enterprise</h3>
               <p>
                 Contact us for a personalized offer

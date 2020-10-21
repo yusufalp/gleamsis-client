@@ -12,6 +12,11 @@
   margin: 90px auto;
 }
 
+blockquote {
+  width: 80%;
+  margin: auto;
+}
+
 blockquote .quote::before {
   content: '\201C';
 }

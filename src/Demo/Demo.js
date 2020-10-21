@@ -1,5 +1,5 @@
 import React from 'react';
-import './Demo.css'
+import './Demo.css';
 
 class Demo extends React.Component {
   state = {
@@ -20,31 +20,31 @@ class Demo extends React.Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    let username = this.state.username
-    let password = this.state.password
+    let username = this.state.username;
+    let password = this.state.password;
 
     if (username.toLowerCase() !== 'admin'){
       this.setState({
-        error: "Username does not exists"
+        error: 'Username does not exist'
       })
-      return
+      return;
     }
 
       if (!username.toLowerCase() || !password) {
         this.setState({
-          error: "Username and password are required"
+          error: 'Username and password are required'
         })
-        return
+        return;
       }
 
-    if (username.toLowerCase() !== "admin" || password !== "password") {
+    if (username.toLowerCase() !== 'admin' || password !== 'password') {
       this.setState({
-        error: "Username and password does not match"
+        error: 'Username and password does not match'
       })
-      return
+      return;
     }
 
-    this.props.history.push("/dashboard")
+    this.props.history.push('/dashboard');
   }
   render() {
     return (
@@ -56,30 +56,30 @@ class Demo extends React.Component {
             help you with your daily tasks and save you valuable time.
           </p>
         </header>
-        <section className="demo-login">
+        <section className='demo-login'>
           <p>For demo users, enter 'admin' and 'password'</p>
         </section>
         <main>
           <form onSubmit={this.handleSubmit}>
-            <label htmlFor="username"></label>
+            <label htmlFor='username'></label>
             <input
-              type="text"
-              name="username"
-              id="username"
+              type='text'
+              name='username'
+              id='username'
               onChange={e => this.handleUsernameChange(e.target.value)}
-              placeholder="Username"
+              placeholder='Username'
               required />
-            <label htmlFor="password"></label>
+            <label htmlFor='password'></label>
             <input
-              type="password"
-              name="password"
-              id="password"
+              type='password'
+              name='password'
+              id='password'
               onChange={e => this.handlePasswordChange(e.target.value)}
-              placeholder="Password"
+              placeholder='Password'
               required />
-            <button type="submit">Log in</button>
-            <p className={`${this.state.error ? "error" : ""}`}>{this.state.error}</p>
-            <p className="required">* = required fields</p>
+            <button type='submit'>Log in</button>
+            <p className={`${this.state.error ? 'error' : ''}`}>{this.state.error}</p>
+            <p className='required'>* = required fields</p>
           </form>
         </main>
       </div>

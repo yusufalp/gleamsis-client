@@ -20,14 +20,14 @@ class AddTeacher extends React.Component {
   }
   handleTeacherSubmit(e) {
     e.preventDefault();
-    let newTeacherFName = this.state.firstName
-    let newTeacherLName = this.state.lastName
+    let newTeacherFName = this.state.firstName;
+    let newTeacherLName = this.state.lastName;
 
     if (!newTeacherFName || !newTeacherLName) {
       this.setState({
-        error: "Teacher first and last name are required"
+        error: 'Teacher first and last name are required'
       })
-      return
+      return;
     }
 
     let newTeacher = {
@@ -35,9 +35,9 @@ class AddTeacher extends React.Component {
       last_name: newTeacherLName
     }
 
-    this.context.addTeacher(newTeacher)
+    this.context.addTeacher(newTeacher);
 
-    this.props.history.push("/success")
+    this.props.history.push("/success");
   }
   render() {
     return (
@@ -64,9 +64,9 @@ class AddTeacher extends React.Component {
             placeholder='Last Name'
             required
           />
-          <button type="submit">Add Teacher</button>
+          <button type='submit'>Add Teacher</button>
           <p>{this.state.error}</p>
-          <p className="required">* = required fields</p>
+          <p className='required'>* = required fields</p>
         </form>
       </div>
     )

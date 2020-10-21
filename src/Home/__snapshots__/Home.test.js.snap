@@ -110,13 +110,13 @@ exports[`Home component renders the UI as expected 1`] = `
           <p
             className="quote"
           >
-            Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.
+            GleamSIS has saved us more than half of the time we used to spend organizing data about our students, parents and teachers. Now with a few clicks we can access it right away. User friendly, practical and just exactly what we need.
           </p>
           <p>
-            —Aldous Huxley,
+            —Sevde Meva Alp,
              
             <cite>
-              Brave New World
+              Principal at That School
             </cite>
           </p>
         </blockquote>
