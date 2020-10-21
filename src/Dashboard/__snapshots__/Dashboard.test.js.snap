@@ -156,26 +156,20 @@ exports[`Dashboard component renders the UI as expected 1`] = `
         </thead>
         <tbody />
       </table>
-      <button
-        type="submit"
+      <a
+        className="btn-add"
+        href="/add-teacher"
+        onClick={[Function]}
       >
-        <a
-          href="/add-teacher"
-          onClick={[Function]}
-        >
-          Add Teacher
-        </a>
-      </button>
-      <button
-        type="submit"
+        Add Teacher
+      </a>
+      <a
+        className="btn-add"
+        href="/add-course"
+        onClick={[Function]}
       >
-        <a
-          href="/add-course"
-          onClick={[Function]}
-        >
-          Add Course
-        </a>
-      </button>
+        Add Course
+      </a>
     </div>
   </div>
 </div>

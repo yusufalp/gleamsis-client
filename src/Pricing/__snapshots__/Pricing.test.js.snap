@@ -37,17 +37,13 @@ exports[`Pricing component renders the UI as expected 1`] = `
             One-Time set up fee
           </li>
         </ul>
-        <button
-          className="btn-price"
-          type="submit"
+        <a
+          className="btn-add"
+          href="/demo"
+          onClick={[Function]}
         >
-          <a
-            href="/demo"
-            onClick={[Function]}
-          >
-            Demo GleamSIS
-          </a>
-        </button>
+          Demo GleamSIS
+        </a>
       </section>
       <section
         className="item-pricing"
@@ -72,17 +68,13 @@ exports[`Pricing component renders the UI as expected 1`] = `
             No set up fee
           </li>
         </ul>
-        <button
-          className="btn-price"
-          type="submit"
+        <a
+          className="btn-add"
+          href="/contact"
+          onClick={[Function]}
         >
-          <a
-            href="/contact"
-            onClick={[Function]}
-          >
-            Request a qoute
-          </a>
-        </button>
+          Request a qoute
+        </a>
       </section>
       <section
         className="item-pricing"
@@ -93,17 +85,13 @@ exports[`Pricing component renders the UI as expected 1`] = `
         <p>
           Contact us for a personalized offer
         </p>
-        <button
-          className="btn-price"
-          type="submit"
+        <a
+          className="btn-add"
+          href="/contact"
+          onClick={[Function]}
         >
-          <a
-            href="/contact"
-            onClick={[Function]}
-          >
-            Contact
-          </a>
-        </button>
+          Contact
+        </a>
       </section>
     </div>
   </main>

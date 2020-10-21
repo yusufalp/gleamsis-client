@@ -90,14 +90,11 @@ exports[`Home component renders the UI as expected 1`] = `
         Want to learn more
       </h2>
       <a
+        className="btn-add"
         href="/contact"
         onClick={[Function]}
       >
-        <button
-          type="submit"
-        >
-          Contact Us
-        </button>
+        Contact Us
       </a>
     </section>
     <section
