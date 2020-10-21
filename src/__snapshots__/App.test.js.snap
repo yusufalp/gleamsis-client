@@ -87,7 +87,7 @@ exports[`App component renders the UI as expected 1`] = `
             All you need is in one place
           </h2>
           <p>
-            You can search for your teachers, students and courses in one place.
+            You can use information for your teachers, students and courses in one place.
           </p>
         </div>
         <div

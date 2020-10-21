@@ -29,12 +29,13 @@ exports[`Teacher component renders the UI as expected 1`] = `
     Delete Teacher
   </button>
   <div
-    className="hidden"
+    className="delete-message hidden"
   >
     <p>
       
     </p>
     <button
+      className="btn-delete"
       onClick={[Function]}
     >
       Yes

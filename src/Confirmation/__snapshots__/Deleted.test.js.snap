@@ -2,14 +2,16 @@
 
 exports[`Deleted component renders the UI as expected 1`] = `
 <div>
-  <h2>
-    Deleted Successfully
-  </h2>
-  <a
-    href="/dashboard"
-    onClick={[Function]}
-  >
-    Go to dashboard
-  </a>
+  <header>
+    <h2>
+      Deleted Successfully
+    </h2>
+    <a
+      href="/dashboard"
+      onClick={[Function]}
+    >
+      Go to dashboard
+    </a>
+  </header>
 </div>
 `;
