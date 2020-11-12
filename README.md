@@ -11,7 +11,6 @@ API is hosted on Heroku
 
 Live web is hosted on Vercel
 
-## Developers
 
 ### How to run this program locally
 
