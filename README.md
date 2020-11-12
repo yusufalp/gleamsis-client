@@ -11,6 +11,37 @@ API is hosted on Heroku
 
 Live web is hosted on Vercel
 
+## Developers
+
+### How to run this program locally
+
+Clone the repo to your local machine:
+
+```
+git clone https://github.com/yusufalp/gleamsis-client.git
+```
+
+Install [dependencies](#dependencies):
+
+```
+npm install
+```
+
+start the app (should start on http://localhost:3000/):
+
+```
+npm start
+```
+
+### Bug reports
+
+If you discover any bugs, feel free to create an issue on GitHub. Please add as much information as
+possible to help us in fixing the potential bug. We also encourage you to help even more by forking and
+sending us a pull request.
+
+https://github.com/yusufalp/gleamsis-client/issues
+
+
 ## Screenshots
 ### Home Page
 ![Home Page](https://i.ibb.co/PjVRChW/home-page.png)
@@ -20,3 +51,6 @@ Live web is hosted on Vercel
 
 ### Dashboard Page
 ![Dashboard Page](https://i.ibb.co/vHgxtCD/dash-page.png)
+
+
+### Developed by Yusuf Alp
