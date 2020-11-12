@@ -21,7 +21,7 @@ Clone the repo to your local machine:
 git clone https://github.com/yusufalp/gleamsis-client.git
 ```
 
-Install [dependencies](#dependencies):
+Install dependencies
 
 ```
 npm install
@@ -53,4 +53,4 @@ https://github.com/yusufalp/gleamsis-client/issues
 ![Dashboard Page](https://i.ibb.co/vHgxtCD/dash-page.png)
 
 
-### Developed by Yusuf Alp
+#### Developed by Yusuf Alp
