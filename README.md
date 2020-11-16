@@ -5,7 +5,13 @@ GleamSIS is a student information systems project. GleamSIS is born because educ
 Live demo can be access at [gleamsis.vercel.app](https://gleamsis.vercel.app/)
 
 ## Technologies Used
-React, Node, Express, PostgreSQL
+`React 16.13`
+
+`Node 12.18`
+
+`Express 4.17`
+
+`PostgreSQL 12.4`
 
 API is hosted on Heroku
 
