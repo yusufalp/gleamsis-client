@@ -19,7 +19,9 @@ class Home extends React.Component {
               <h2>All you need is in one place</h2>
               <p>
                 You can use information for your teachers, students and courses
-                in one place.
+                in one place. Every school generate thousands of data every single day.
+                Keeping track of the data, accessing it and using it every day is made simple with
+                GleamSIS.
             </p>
             </div>
             <div className='item'>
@@ -30,7 +32,9 @@ class Home extends React.Component {
             <div className='item'>
               <h2>Access your data with ease</h2>
               <p>
-                With visual data display, you can easily see your Gleam usage.
+                With visual data display, you can use your time better. Filter and sort 
+                through what you need, have GleamSIS generate an awesome looking graph, share it 
+                with others and let the knowledge flow.
             </p>
             </div>
             <div className='item'>
@@ -41,7 +45,9 @@ class Home extends React.Component {
             <div className='item'>
               <h2>Provide your staff great experience</h2>
               <p>
-                Improve your staff's performance and let them manage their time effectively
+                Improve your staff's performance and let them manage their time effectively. You can 
+                see their usage time, offer help and support, or suggest curated tips and tricks that will 
+                improve their performance.
             </p>
             </div>
             <div className='item'>
