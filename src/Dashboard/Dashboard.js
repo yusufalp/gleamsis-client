@@ -9,7 +9,7 @@ class Dashboard extends React.Component {
   static contextType = DataContext
   render() {
     return (
-      <div>
+      <div className='dash-back'>
         <header>
           <h2>Welcome to your Dashboard</h2>
         </header>
