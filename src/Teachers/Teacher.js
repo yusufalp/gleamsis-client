@@ -32,13 +32,17 @@ class Teacher extends React.Component {
     return (
       <div className='dash'>
         <h2>Hello admin,</h2>
-        <p>This is {teacher.first_name} {teacher.last_name}'s information</p>
-        <p>First Name: {teacher.first_name}</p>
-        <p>Last Name: {teacher.last_name}</p>
-        <p>Courses:</p>
-        {courses.map((course, i) =>
-          <p key={i}><Link to={`/courses/${course.id}`}>{course.name}</Link></p>
-        )}
+        <div className='card-display'>
+          <p>This is {teacher.first_name} {teacher.last_name}'s information</p>
+          <p>First Name: {teacher.first_name}</p>
+          <p>Last Name: {teacher.last_name}</p>
+        </div>
+        <div className='card-display'>
+          <p>Courses teaching:</p>
+          {courses.map((course, i) =>
+            <p key={i}><Link to={`/courses/${course.id}`}>{course.name}</Link></p>
+          )}
+        </div>
         <button
           type='submit'
           className={`${teacher.id === 0 ? 'hidden' : ''}`}

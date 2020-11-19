@@ -39,14 +39,18 @@ class Student extends React.Component {
     }
     return (
       <div className='dash'>
-          <h3>Hello admin,</h3>
-        <p>This is {student.first_name} {student.last_name}'s information</p>
-        <p>First Name: {student.first_name}</p>
-        <p>Last Name: {student.last_name}</p>
-        <p>Courses enrolled: </p>
-        {enrolledCourses.map((course, i) =>
-          <p key={i}><Link to={`/courses/${course.id}`}>{course.name}</Link></p>
-        )}
+        <h2>Hello admin,</h2>
+        <div className='card-display'>
+          <p>This is {student.first_name} {student.last_name}'s information</p>
+          <p>First Name: {student.first_name}</p>
+          <p>Last Name: {student.last_name}</p>
+        </div>
+        <div className='card-display'>
+          <p>Courses enrolled: </p>
+          {enrolledCourses.map((course, i) =>
+            <p key={i}><Link to={`/courses/${course.id}`}>{course.name}</Link></p>
+          )}
+        </div>
         <button type='submit' onClick={e => this.handleConfirmStudent(student)}>Delete Student</button>
 
         <div className={`delete-message ${this.state.confirm ? '' : 'hidden'}`}>

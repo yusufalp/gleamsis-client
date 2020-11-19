@@ -11,7 +11,7 @@ class Courses extends React.Component {
     return (
       <div className='dash'>
           <h3>Hello {teacher.first_name}, this is {course.name} class</h3>
-        <table>
+        <table className='card-display'>
           <thead>
             <tr>
               <th>First Name</th>
