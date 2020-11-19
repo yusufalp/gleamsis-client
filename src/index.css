@@ -12,10 +12,6 @@ body {
   background-size: 100%;
 }
 
-.dash-back {
-  background-image: none;
-}
-
 header {
   width: 90%;
   text-align: center;
@@ -135,7 +131,7 @@ td {
 }
 
 .group {
-  width: 100%;
+  width: 95%;
   display: flex;
   justify-content: space-between;
   align-content: flex-start;
@@ -185,13 +181,20 @@ td {
 }
 
 .item-dash {
+  text-align: center;
+}
+
+.card-display {
+  background-color: #eef0f2;
   border: 1px solid black;
   border-radius: 5px;
-  box-shadow: 2px 2px 10px;
-  margin: 0 6px 12px;
+  box-shadow: 1px 1px 10px ;
+  margin: 6px 0;
   padding: 6px 0;
-  width: 100%;
-  text-align: center;
+}
+
+.card-display p{
+  padding-left: 6px ;
 }
 
 .item-dash h3 {
@@ -202,7 +205,7 @@ td {
   display: block;
 }
 
-h2,
+
 .add-info {
   width: 80%;
   margin: auto;
@@ -223,9 +226,17 @@ h2,
 
 .btn-delete {
   background-color: #ff0022;
+} 
+
+.exp-table{
+  margin-left: 6px;
 }
 
-@media all and (min-width: 650px) {
+.msg-table{
+  margin-right: 6px;
+}
+
+@media all and (min-width: 694px) {
   header {
     width: 50%;
   }
@@ -266,6 +277,10 @@ h2,
     border-left: 1px solid;
     border-top: none;
     border-bottom: none;
+  }
+
+  .item-dash {
+    width: 100%;
   }
 
   .btn-price {
