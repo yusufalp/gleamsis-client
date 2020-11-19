@@ -4,23 +4,31 @@ exports[`Student component renders the UI as expected 1`] = `
 <div
   className="dash"
 >
-  <h3>
+  <h2>
     Hello admin,
-  </h3>
-  <p>
-    This is 
-     
-    's information
-  </p>
-  <p>
-    First Name: 
-  </p>
-  <p>
-    Last Name: 
-  </p>
-  <p>
-    Courses enrolled: 
-  </p>
+  </h2>
+  <div
+    className="card-display"
+  >
+    <p>
+      This is 
+       
+      's information
+    </p>
+    <p>
+      First Name: 
+    </p>
+    <p>
+      Last Name: 
+    </p>
+  </div>
+  <div
+    className="card-display"
+  >
+    <p>
+      Courses enrolled: 
+    </p>
+  </div>
   <button
     onClick={[Function]}
     type="submit"

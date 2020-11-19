@@ -11,7 +11,7 @@ exports[`Dashboard component renders the UI as expected 1`] = `
     className="group"
   >
     <div
-      className="item-dash"
+      className="item-dash card-display msg-table"
     >
       <h3>
         Messages
@@ -48,7 +48,7 @@ exports[`Dashboard component renders the UI as expected 1`] = `
       </table>
     </div>
     <div
-      className="item-dash"
+      className="item-dash card-display exp-table"
     >
       <h3>
         Expenditure
@@ -133,7 +133,7 @@ exports[`Dashboard component renders the UI as expected 1`] = `
     className="group"
   >
     <div
-      className="item-dash"
+      className="item-dash card-display"
     >
       <h3>
         Courses
