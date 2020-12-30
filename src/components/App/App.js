@@ -18,6 +18,8 @@ import Success from '../Confirmation/Success';
 import Deleted from '../Confirmation/Deleted';
 import Page404 from '../Page404/Page404';
 import Footer from '../Footer/Footer';
+import PrivateRoute from '../Utils/PrivateRoute';
+import PublicOnlyRoute from '../Utils/PublicOnlyRoute';
 
 import DataContext from '../DataContext';
 
@@ -189,11 +191,11 @@ class App extends React.Component {
               exact path='/'
               component={Home}
             />
-            <Route
+            <PublicOnlyRoute
               path='/demo'
               component={Demo}
             />
-            <Route
+            <PrivateRoute
               path='/dashboard'
               component={Dashboard}
             />
@@ -209,35 +211,35 @@ class App extends React.Component {
               path='/contact'
               component={Contact}
             />
-            <Route
+            <PrivateRoute
               path='/courses/:id'
               component={Courses}
             />
-            <Route
+            <PrivateRoute
               path='/teachers/:id'
               component={Teacher}
             />
-            <Route
+            <PrivateRoute
               path='/students/:id'
               component={Student}
             />
-            <Route
+            <PrivateRoute
               path='/add-teacher'
               component={AddTeacher}
             />
-            <Route
+            <PrivateRoute
               path='/add-student'
               component={AddStudent}
             />
-            <Route
+            <PrivateRoute
               path='/add-course'
               component={AddCourse}
             />
-            <Route
+            <PrivateRoute
               path='/success'
               component={Success}
             />
-            <Route
+            <PrivateRoute
               path='/deleted'
               component={Deleted}
             />
