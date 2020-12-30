@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddStudent component renders the UI as expected 1`] = `
+<div>
+  <header>
+    <h2>
+      Add a Student
+    </h2>
+  </header>
+  <p
+    className="add-info"
+  >
+    Use the form below to add a student. You must add a student to a current course. If the course does not exist, 
+    <a
+      className="form-link"
+      href="/add-course"
+      onClick={[Function]}
+    >
+      add the course
+    </a>
+     first.
+  </p>
+  <form
+    onSubmit={[Function]}
+  >
+    <label
+      htmlFor="firstName"
+    />
+    <input
+      id="firstName"
+      name="firstName"
+      onChange={[Function]}
+      placeholder="First Name"
+      required={true}
+      type="text"
+    />
+    <label
+      htmlFor="lastName"
+    />
+    <input
+      id="lastName"
+      name="lastName"
+      onChange={[Function]}
+      placeholder="Last Name"
+      required={true}
+      type="text"
+    />
+    <label
+      htmlFor="course"
+    />
+    <select
+      id="grade"
+      name="course"
+      onChange={[Function]}
+      required={true}
+    >
+      <option
+        value=""
+      >
+        Select a Course
+      </option>
+    </select>
+    <label
+      htmlFor="grade"
+    />
+    <select
+      id="grade"
+      name="grade"
+      onChange={[Function]}
+      required={true}
+      type="text"
+    >
+      <option
+        value=""
+      >
+        Select a Grade
+      </option>
+      <option>
+        A
+      </option>
+      <option>
+        B
+      </option>
+      <option>
+        C
+      </option>
+      <option>
+        D
+      </option>
+      <option>
+        F
+      </option>
+    </select>
+    <button
+      type="submit"
+    >
+      Add Student
+    </button>
+    <p>
+      
+    </p>
+    <p
+      className="required"
+    >
+      * = required fields
+    </p>
+  </form>
+</div>
+`;

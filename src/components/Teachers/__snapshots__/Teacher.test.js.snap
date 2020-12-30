@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Teacher component renders the UI as expected 1`] = `
+<div
+  className="dash"
+>
+  <h2>
+    Hello admin,
+  </h2>
+  <div
+    className="card-display"
+  >
+    <p>
+      This is 
+       
+      's information
+    </p>
+    <p>
+      First Name: 
+    </p>
+    <p>
+      Last Name: 
+    </p>
+  </div>
+  <div
+    className="card-display"
+  >
+    <p>
+      Courses teaching:
+    </p>
+  </div>
+  <button
+    className=""
+    onClick={[Function]}
+    type="submit"
+  >
+    Delete Teacher
+  </button>
+  <div
+    className="delete-message hidden"
+  >
+    <p>
+      
+    </p>
+    <button
+      className="btn-delete"
+      onClick={[Function]}
+    >
+      Yes
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      No
+    </button>
+  </div>
+</div>
+`;

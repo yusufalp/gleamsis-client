@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testimonials component renders the UI as expected 1`] = `
+<div>
+  <blockquote
+    cite="https://www.huxley.net/bnw/four.html"
+  >
+    <p
+      className="quote"
+    >
+      GleamSIS has saved us more than half of the time we used to spend organizing data about our students, parents and teachers. Now with a few clicks we can access it right away. User friendly, practical and just exactly what we need.
+    </p>
+    <p>
+      —Sevde Meva Alp,
+       
+      <cite>
+        Principal at That School
+      </cite>
+    </p>
+  </blockquote>
+</div>
+`;
