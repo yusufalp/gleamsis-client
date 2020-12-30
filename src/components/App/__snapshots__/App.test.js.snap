@@ -152,7 +152,9 @@ exports[`App component renders the UI as expected 1`] = `
         src="images/banner3.png"
       />
       <section>
-        <h2>
+        <h2
+          className="section-title"
+        >
           Want to learn more
         </h2>
         <a
@@ -166,7 +168,9 @@ exports[`App component renders the UI as expected 1`] = `
       <section
         className="testimonials"
       >
-        <h2>
+        <h2
+          className="section-title"
+        >
           Testimonials
         </h2>
         <div>
