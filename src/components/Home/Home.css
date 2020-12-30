@@ -18,9 +18,13 @@ blockquote {
 }
 
 blockquote .quote::before {
-  content: '\201C';
+  content: "\201C";
 }
 
 blockquote .quote::after {
-  content: '\201D';
+  content: "\201D";
+}
+
+.section-title {
+  text-align: center;
 }
