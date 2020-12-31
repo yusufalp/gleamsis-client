@@ -7,18 +7,17 @@ class Demo extends React.Component {
     username: '',
     password: '',
     error: ''
-  }
+  };
   handleUsernameChange = (value) => {
     this.setState({
       username: value.trim()
-    })
-  }
+    });
+  };
   handlePasswordChange = (value) => {
     this.setState({
       password: value.trim()
-    })
-
-  }
+    });
+  };
   handleSubmit = (e) => {
     e.preventDefault();
     let username = this.state.username;
@@ -29,7 +28,7 @@ class Demo extends React.Component {
     if (username.toLowerCase() !== 'admin') {
       this.setState({
         error: 'Username does not exist'
-      })
+      });
       return;
     }
 
@@ -37,7 +36,7 @@ class Demo extends React.Component {
     if (!username.toLowerCase() || !password) {
       this.setState({
         error: 'Username and password are required'
-      })
+      });
       return;
     }
 
@@ -45,7 +44,7 @@ class Demo extends React.Component {
     if (username.toLowerCase() !== 'admin' || password !== 'password') {
       this.setState({
         error: 'Username and password does not match'
-      })
+      });
       return;
     }
 
@@ -54,7 +53,7 @@ class Demo extends React.Component {
     )
 
     this.props.history.push('/dashboard');
-  }
+  };
   render() {
     return (
       <div>
@@ -92,7 +91,7 @@ class Demo extends React.Component {
           </form>
         </main>
       </div>
-    )
+    );
   }
 }
 

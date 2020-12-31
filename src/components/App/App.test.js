@@ -23,4 +23,4 @@ describe('App component', () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
-})
+});

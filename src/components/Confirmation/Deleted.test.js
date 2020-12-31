@@ -23,4 +23,4 @@ describe('Deleted component', () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
-})
+});

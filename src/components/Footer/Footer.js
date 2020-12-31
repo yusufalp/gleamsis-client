@@ -26,7 +26,7 @@ class Footer extends React.Component {
         </div>
         <p className='copy'>Copyrights &#169; Yusuf Alp 2020</p>
       </div>
-    )
+    );
   }
 }
 

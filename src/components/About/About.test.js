@@ -16,4 +16,4 @@ describe('About component', () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
-})
+});

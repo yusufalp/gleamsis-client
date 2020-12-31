@@ -16,4 +16,4 @@ describe('Page404 component', () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
-})
+});

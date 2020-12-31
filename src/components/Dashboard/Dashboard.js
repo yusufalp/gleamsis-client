@@ -6,7 +6,7 @@ import Teachers from '../Teachers/Teachers';
 import DataContext from '../DataContext';
 
 class Dashboard extends React.Component {
-  static contextType = DataContext
+  static contextType = DataContext;
   render() {
     return (
       <div>
@@ -45,7 +45,7 @@ class Dashboard extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 

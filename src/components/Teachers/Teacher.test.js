@@ -23,4 +23,4 @@ describe('Teacher component', () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
-})
+});

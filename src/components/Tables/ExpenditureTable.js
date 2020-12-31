@@ -2,7 +2,6 @@ import React from 'react';
 
 export default function ExpenditureTable() {
   return (
-
     <table>
       <thead>
         <tr>
@@ -41,5 +40,5 @@ export default function ExpenditureTable() {
         </tr>
       </thead>
     </table>
-  )
+  );
 }

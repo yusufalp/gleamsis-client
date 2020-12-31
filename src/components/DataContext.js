@@ -12,6 +12,6 @@ const DataContext = React.createContext({
   getTeachers: () => { },
   getStudents: () => { },
   getCourses: () => { }
-})
+});
 
 export default DataContext;

@@ -6,16 +6,17 @@ import TokenService from '../../services/token-service';
 class Navbar extends React.Component {
   state = {
     menuVisible: true
-  }
+  };
 
   handleLogoutClick = () => {
-  }
+    TokenService.clearAuthToken()
+  };
 
   handleMenu = () => {
     this.setState({
       menuVisible: !this.state.menuVisible
     })
-  }
+  };
 
   renderLogoutLink() {
     return (
@@ -26,7 +27,7 @@ class Navbar extends React.Component {
           Logout
         </Link>
       </div>
-    )
+    );
   }
 
   renderLoginLink() {
@@ -39,7 +40,7 @@ class Navbar extends React.Component {
         <NavLink to='/about'>About</NavLink>
         <NavLink to='/contact'>Contact</NavLink>
       </div>
-    )
+    );
   }
   render() {
     return (
@@ -54,9 +55,8 @@ class Navbar extends React.Component {
           ? this.renderLogoutLink()
           : this.renderLoginLink()}
       </nav>
-    )
+    );
   }
 }
 
-//
 export default Navbar;

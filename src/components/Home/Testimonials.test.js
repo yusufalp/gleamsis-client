@@ -12,8 +12,8 @@ describe('Testimonials component', () => {
 
   it('renders the UI as expected', () => {
     const tree = renderer
-      .create( <Testimonials />)
+      .create(<Testimonials />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
-})
+});

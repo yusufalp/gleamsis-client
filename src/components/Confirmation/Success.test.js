@@ -23,4 +23,4 @@ describe('Success component', () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
-})
+});

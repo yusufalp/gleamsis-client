@@ -7,25 +7,25 @@ class Student extends React.Component {
   state = {
     confirm: false,
     message: '',
-  }
-  handleConfirmStudent(student) {
+  };
+  handleConfirmStudent = (student) => {
     this.setState({
       confirm: true,
       message: `BE CAREFUL. Deleting a student removes the student from all of the classes registered. Do you want to delete student ${student.first_name} ${student.last_name}?`
-    })
-  }
+    });
+  };
   handleConfirmDelete = (student) => {
     this.context.deleteStudent(student);
     this.setState({
       confirm: false
-    })
+    });
     this.props.history.push('/deleted');
-  }
+  };
   handleCancelDelete = () => {
     this.setState({
       confirm: false
-    })
-  }
+    });
+  };
 
   render() {
     let student = this.context.students.find(student => student.id === Number(this.props.match.params.id)) || {};
@@ -59,7 +59,7 @@ class Student extends React.Component {
           <button onClick={this.handleCancelDelete}>No</button>
         </div>
       </div>
-    )
+    );
   }
 }
 

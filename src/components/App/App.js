@@ -33,7 +33,7 @@ class App extends React.Component {
     teachers: [],
     students: [],
     courses: [],
-  }
+  };
   componentDidMount() {
     this.getTeachers();
     this.getStudents();
@@ -52,7 +52,7 @@ class App extends React.Component {
         })
       })
       .catch(err => console.log(err))
-  }
+  };
   getStudents = () => {
     fetch(`${url}/api/students`, {
       headers: {
@@ -66,7 +66,7 @@ class App extends React.Component {
         })
       })
       .catch(err => console.log(err))
-  }
+  };
   getCourses = () => {
     fetch(`${url}/api/courses`, {
       headers: {
@@ -80,7 +80,7 @@ class App extends React.Component {
         })
       })
       .catch(err => console.log(err))
-  }
+  };
   addTeacher = (newTeacher) => {
     fetch(`${url}/api/teachers`, {
       method: 'POST',
@@ -94,11 +94,11 @@ class App extends React.Component {
       })
     })
       .then(() => {
-        this.getTeachers()
-        this.props.history.push('/success')
+        this.getTeachers();
+        this.props.history.push('/success');
       })
       .catch(err => console.log(err))
-  }
+  };
   addCourse = (newCourse) => {
     fetch(`${url}/api/courses`, {
       method: 'POST',
@@ -113,8 +113,8 @@ class App extends React.Component {
       })
     })
       .then(() => {
-        this.getCourses()
-        this.props.history.push('/success')
+        this.getCourses();
+        this.props.history.push('/success');
       })
       .catch(err => console.log(err))
   }
@@ -137,7 +137,7 @@ class App extends React.Component {
         this.props.history.push('/success');
       })
       .catch(err => console.log(err))
-  }
+  };
   deleteTeacher = (teacher) => {
     fetch(`${url}/api/teachers/${teacher.id}`, {
       method: 'DELETE',
@@ -153,7 +153,7 @@ class App extends React.Component {
         this.getCourses();
         this.props.history.push('/deleted');
       })
-  }
+  };
   deleteStudent = (student) => {
     fetch(`${url}/api/students/${student.id}`, {
       method: 'DELETE',
@@ -166,7 +166,7 @@ class App extends React.Component {
         this.getStudents();
         this.props.history.push('/deleted');
       })
-  }
+  };
 
   render() {
     const contextValue = {
@@ -181,7 +181,7 @@ class App extends React.Component {
       getTeachers: this.getTeachers,
       getStudents: this.getStudents,
       getCourses: this.getCourses
-    }
+    };
     return (
       <div className='App' >
         <DataContext.Provider value={contextValue}>

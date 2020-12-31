@@ -32,7 +32,7 @@ class About extends React.Component {
           </main>
         </header>
       </div>
-    )
+    );
   }
 }
 

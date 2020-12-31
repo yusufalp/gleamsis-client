@@ -16,4 +16,4 @@ describe('MessageTable component', () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
-})
+});

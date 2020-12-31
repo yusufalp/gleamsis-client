@@ -23,4 +23,4 @@ describe('Home component', () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
-})
+});

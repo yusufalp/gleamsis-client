@@ -23,4 +23,4 @@ describe('Navbar component', () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
-})
+});

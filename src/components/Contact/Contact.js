@@ -23,7 +23,7 @@ class Contact extends React.Component {
           </form>
         </main>
       </div>
-    )
+    );
   }
 }
 

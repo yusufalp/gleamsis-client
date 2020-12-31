@@ -9,7 +9,7 @@ class AddCourse extends React.Component {
     category: '',
     teacherId: '',
     error: ''
-  }
+  };
   handleCourseName(value) {
     this.setState({
       name: value.trim()
@@ -32,7 +32,7 @@ class AddCourse extends React.Component {
     if (!this.state.name || !this.state.category || !this.state.teacherId) {
       this.setState({
         error: 'Name, category and teacher are required'
-      })
+      });
       return;
     }
 
@@ -40,7 +40,7 @@ class AddCourse extends React.Component {
       name: this.state.name,
       category: this.state.category,
       teacher_id: Number(this.state.teacherId)
-    }
+    };
 
     this.context.addCourse(newCourse);
   }
@@ -89,7 +89,7 @@ class AddCourse extends React.Component {
           <p className='required'>* = required fields</p>
         </form>
       </div>
-    )
+    );
   }
 }
 

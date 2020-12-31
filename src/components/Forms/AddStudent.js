@@ -10,7 +10,7 @@ class AddStudent extends React.Component {
     courseId: '',
     grade: '',
     error: ''
-  }
+  };
   handleStudentFName(value) {
     this.setState({
       firstName: value.trim()
@@ -39,7 +39,7 @@ class AddStudent extends React.Component {
       last_name: this.state.lastName,
       course_id: Number(this.state.courseId),
       grade: this.state.grade
-    }
+    };
 
     this.context.addStudent(newStudent);
   }

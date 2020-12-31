@@ -8,7 +8,7 @@ class Testimonials extends React.Component {
         author: '—Sevde Meva Alp,',
         cite: 'Principal at That School'
       },
-    ]
+    ];
     return (
       <div>
         {testimonials.map((testimonial, i) =>
@@ -18,7 +18,7 @@ class Testimonials extends React.Component {
           </blockquote>
         )}
       </div>
-    )
+    );
   }
 }
 

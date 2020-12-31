@@ -16,4 +16,4 @@ describe('ExpenditureTable component', () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
-})
+});

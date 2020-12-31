@@ -16,4 +16,4 @@ describe('Footer component', () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
-})
+});

@@ -7,7 +7,7 @@ class AddTeacher extends React.Component {
     firstName: '',
     lastName: '',
     error: ''
-  }
+  };
   handleTeacherFName(value) {
     this.setState({
       firstName: value.trim()
@@ -27,14 +27,14 @@ class AddTeacher extends React.Component {
     if (!newTeacherFName || !newTeacherLName) {
       this.setState({
         error: 'Teacher first and last name are required'
-      })
+      });
       return;
     }
 
     let newTeacher = {
       first_name: newTeacherFName,
       last_name: newTeacherLName
-    }
+    };
 
     this.context.addTeacher(newTeacher);
   }
@@ -68,7 +68,7 @@ class AddTeacher extends React.Component {
           <p className='required'>* = required fields</p>
         </form>
       </div>
-    )
+    );
   }
 }
 

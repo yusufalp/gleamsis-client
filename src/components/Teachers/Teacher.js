@@ -7,24 +7,24 @@ class Teacher extends React.Component {
   state = {
     confirm: false,
     message: ''
-  }
-  handleDeleteTeacher(teacher) {
+  };
+  handleDeleteTeacher = (teacher) => {
     this.setState({
       confirm: true,
       message: `BE CAREFUL. Deleting a teacher will delete all the courses this teacher is assigned. Do you want to delete teacher ${teacher.first_name} ${teacher.last_name}?`
-    })
-  }
+    });
+  };
   handleConfirmTeacher = (teacher) => {
     this.context.deleteTeacher(teacher);
     this.setState({
       confirm: false
-    })
-  }
+    });
+  };
   handleCancelTeacher = () => {
     this.setState({
       confirm: false
-    })
-  }
+    });
+  };
 
   render() {
     let teacher = this.context.teachers.find(teacher => teacher.id === Number(this.props.match.params.id)) || {};
@@ -53,7 +53,7 @@ class Teacher extends React.Component {
           <button onClick={this.handleCancelTeacher}>No</button>
         </div>
       </div>
-    )
+    );
   }
 }
 

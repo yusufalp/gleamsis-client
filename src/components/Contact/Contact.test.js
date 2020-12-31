@@ -16,4 +16,4 @@ describe('Contact component', () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
-})
+});

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class Pricing extends React.Component {
   render() {
@@ -49,7 +49,7 @@ class Pricing extends React.Component {
           </div>
         </main>
       </div>
-    )
+    );
   }
 }
 

@@ -23,4 +23,4 @@ describe('Pricing component', () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
-})
+});

@@ -16,4 +16,4 @@ describe('AddTeacher component', () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
-})
+});

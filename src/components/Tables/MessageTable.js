@@ -19,5 +19,6 @@ export default function MessageTable() {
           <td>Congratulations!</td>
         </tr>
       </tbody>
-    </table>)
+    </table>
+  );
 }

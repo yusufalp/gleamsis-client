@@ -9,8 +9,8 @@ class Deleted extends React.Component {
           <h2>Deleted Successfully</h2>
           <Link to={'/dashboard'}>Go to dashboard</Link>
         </header>
-      </div >
-    )
+      </div>
+    );
   }
 }
 

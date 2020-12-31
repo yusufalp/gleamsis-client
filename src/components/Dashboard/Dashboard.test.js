@@ -23,4 +23,4 @@ describe('Dashboard component', () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
-})
+});

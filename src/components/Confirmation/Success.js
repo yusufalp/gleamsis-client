@@ -10,7 +10,7 @@ class Success extends React.Component {
           <Link to={'/dashboard'}>Go to dashboard</Link>
         </header>
       </div>
-    )
+    );
   }
 }
 
