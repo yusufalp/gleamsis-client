@@ -26,7 +26,7 @@ class Footer extends React.Component {
             <p>Management Systems</p>
           </div>
         </div>
-        <p className='copy'>Copyrights &#169; Yusuf Alp 2020-${year}</p>
+        <p className='copy'>Copyrights &#169; Yusuf Alp 2020-{year}</p>
       </div>
     );
   }
