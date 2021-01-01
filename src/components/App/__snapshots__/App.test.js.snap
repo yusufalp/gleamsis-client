@@ -249,7 +249,7 @@ exports[`App component renders the UI as expected 1`] = `
     <p
       className="copy"
     >
-      Copyrights © Yusuf Alp 2020
+      Copyrights © Yusuf Alp 2020-2021
     </p>
   </div>
 </div>
