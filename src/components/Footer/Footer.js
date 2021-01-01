@@ -1,6 +1,8 @@
 import React from 'react';
 import './Footer.css';
 
+const year = new Date().getFullYear();
+
 class Footer extends React.Component {
   render() {
     return (
@@ -24,7 +26,7 @@ class Footer extends React.Component {
             <p>Management Systems</p>
           </div>
         </div>
-        <p className='copy'>Copyrights &#169; Yusuf Alp 2020-2021</p>
+        <p className='copy'>Copyrights &#169; Yusuf Alp 2020-${year}</p>
       </div>
     );
   }
