@@ -20,7 +20,7 @@ describe('App component', () => {
         <MemoryRouter>
           <App />
         </MemoryRouter>)
-      .toJSON();
+      .toJSON()
     expect(tree).toMatchSnapshot();
   });
 });

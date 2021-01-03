@@ -13,7 +13,7 @@ describe('Footer component', () => {
   it('renders the UI as expected', () => {
     const tree = renderer
       .create(<Footer />)
-      .toJSON();
+      .toJSON()
     expect(tree).toMatchSnapshot();
   });
 });
