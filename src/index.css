@@ -12,6 +12,10 @@ body {
   background-size: 100%;
 }
 
+h3 {
+  margin-left: 1%;
+}
+
 header {
   width: 90%;
   text-align: center;
@@ -180,21 +184,17 @@ td {
   font-weight: bold;
 }
 
-.item-dash {
-  text-align: center;
-}
-
 .card-display {
   background-color: #eef0f2;
   border: 1px solid black;
   border-radius: 5px;
-  box-shadow: 1px 1px 10px ;
+  box-shadow: 1px 1px 10px;
   margin: 6px 0;
   padding: 6px 0;
 }
 
-.card-display p{
-  padding-left: 6px ;
+.card-display p {
+  padding-left: 6px;
 }
 
 .item-dash h3 {
@@ -204,7 +204,6 @@ td {
 .item-students {
   display: block;
 }
-
 
 .add-info {
   width: 80%;
@@ -226,14 +225,6 @@ td {
 
 .btn-delete {
   background-color: #ff0022;
-} 
-
-.exp-table{
-  margin-left: 6px;
-}
-
-.msg-table{
-  margin-right: 6px;
 }
 
 @media all and (min-width: 694px) {
@@ -287,5 +278,13 @@ td {
     position: absolute;
     bottom: 12px;
     left: 25%;
+  }
+
+  .exp-table {
+    margin-left: 6px;
+  }
+
+  .msg-table {
+    margin-right: 6px;
   }
 }
