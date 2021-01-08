@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ExpenditureTable from '../Tables/ExpenditureTable';
 import Teachers from '../Teachers/Teachers';
 import DataContext from '../DataContext';
 import Inbox from '../Inbox/Inbox';
