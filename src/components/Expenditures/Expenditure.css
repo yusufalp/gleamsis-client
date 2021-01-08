@@ -1,0 +1,14 @@
+.expenditure {
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.budget,
+.description,
+.actual {
+  width: 30%;
+}
