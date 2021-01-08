@@ -4,6 +4,7 @@ import DashMessage from '../Tables/MessageTable';
 import ExpenditureTable from '../Tables/ExpenditureTable';
 import Teachers from '../Teachers/Teachers';
 import DataContext from '../DataContext';
+import Inbox from '../Communication/Inbox';
 
 class Dashboard extends React.Component {
   static contextType = DataContext;
@@ -15,8 +16,7 @@ class Dashboard extends React.Component {
         </header>
         <div className='group'>
           <div className='item-dash card-display msg-table'>
-            <h3>Messages</h3>
-            <DashMessage />
+            <Inbox />
           </div>
           <div className='item-dash card-display exp-table'>
             <h3>Expenditure</h3>
