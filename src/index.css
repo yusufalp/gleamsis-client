@@ -284,7 +284,14 @@ td {
     margin-left: 6px;
   }
 
-  .msg-table {
+  .inbox-table {
     margin-right: 6px;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .inbox > p,
+  .expenditure > p {
+    font-size: 10px;
   }
 }
