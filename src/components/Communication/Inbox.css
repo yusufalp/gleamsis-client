@@ -1,0 +1,18 @@
+.inbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.subject {
+  flex-grow: 1;
+  width: 40%;
+}
+
+.from,
+.date {
+  width: 30%;
+}
