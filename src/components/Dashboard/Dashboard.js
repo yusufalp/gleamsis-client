@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import DashMessage from '../Tables/MessageTable';
 import ExpenditureTable from '../Tables/ExpenditureTable';
 import Teachers from '../Teachers/Teachers';
 import DataContext from '../DataContext';
-import Inbox from '../Communication/Inbox';
+import Inbox from '../Inbox/Inbox';
+import Expenditures from '../Expenditures/Expenditures';
 
 class Dashboard extends React.Component {
   static contextType = DataContext;
@@ -15,12 +15,11 @@ class Dashboard extends React.Component {
           <h2>Welcome to your Dashboard</h2>
         </header>
         <div className='group'>
-          <div className='item-dash card-display msg-table'>
+          <div className='item-dash card-display inbox-table'>
             <Inbox />
           </div>
           <div className='item-dash card-display exp-table'>
-            <h3>Expenditure</h3>
-            <ExpenditureTable />
+            <Expenditures />
           </div>
         </div>
         <div className='group'>
