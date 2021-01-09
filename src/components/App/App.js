@@ -14,8 +14,7 @@ import Student from '../Students/Student';
 import AddTeacher from '../Forms/AddTeacher';
 import AddStudent from '../Forms/AddStudent';
 import AddCourse from '../Forms/AddCourse';
-import Success from '../Confirmation/Success';
-import Deleted from '../Confirmation/Deleted';
+import Confirmation from '../Confirmation/Confirmation';
 import Page404 from '../Page404/Page404';
 import Footer from '../Footer/Footer';
 import PrivateRoute from '../Utils/PrivateRoute';
@@ -237,11 +236,11 @@ class App extends React.Component {
             />
             <PrivateRoute
               path='/success'
-              component={Success}
+              component={Confirmation}
             />
             <PrivateRoute
               path='/deleted'
-              component={Deleted}
+              component={Confirmation}
             />
             <Route
               component={Page404}
