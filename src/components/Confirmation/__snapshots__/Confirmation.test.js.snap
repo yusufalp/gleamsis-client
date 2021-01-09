@@ -1,10 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Success component renders the UI as expected 1`] = `
+exports[`Confirmation page component renders the UI as expected 1`] = `
 <div>
   <header>
     <h2>
-      Added Successfully
+      Deleted
+       Successfully
     </h2>
     <a
       href="/dashboard"
