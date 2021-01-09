@@ -45,7 +45,7 @@ class Navbar extends React.Component {
   render() {
     return (
       <nav>
-        <Link to='/'><p className='logo'>G<span className='logo-part'>leamSIS</span></p></Link>
+        <Link to='/dashboard'><p className='logo'>G<span className='logo-part'>leamSIS</span></p></Link>
         <button
           className='menu-toggler'
           onClick={this.handleMenu}
