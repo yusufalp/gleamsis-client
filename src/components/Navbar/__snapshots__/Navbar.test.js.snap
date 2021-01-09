@@ -3,7 +3,7 @@
 exports[`Navbar component renders the UI as expected 1`] = `
 <nav>
   <a
-    href="/"
+    href="/dashboard"
     onClick={[Function]}
   >
     <p
