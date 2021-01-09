@@ -15,7 +15,9 @@ exports[`About component renders the UI as expected 1`] = `
     </p>
     <main>
       <section>
-        <h3>
+        <h3
+          className="subtitle"
+        >
           Why GleamSIS
         </h3>
         <p>
