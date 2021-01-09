@@ -12,7 +12,7 @@ const About = () => {
           </p>
         <main>
           <section>
-            <h3>Why GleamSIS</h3>
+            <h3 className='subtitle'>Why GleamSIS</h3>
             <p>
               GleamSIS is born because educators needed it. In education, we are
               generating so many data such as grades, contact information, student, teacher
