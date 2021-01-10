@@ -23,7 +23,7 @@ class Navbar extends React.Component {
       <div className={`navbar-links ${this.state.menuVisible ? 'open-menu' : ''}`}>
         <Link
           onClick={this.handleLogoutClick}
-          to='/'>
+          to='/demo'>
           Logout
         </Link>
       </div>
