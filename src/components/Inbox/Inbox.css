@@ -3,16 +3,26 @@
   flex-direction: row;
 }
 
-.title {
+.inb {
   font-weight: bold;
 }
 
 .subject {
   flex-grow: 1;
-  width: 40%;
+  width: 50%;
+  margin: 6px auto;
 }
 
 .from,
-.date {
+.date,
+.subject {
+  margin: 6px auto;
+}
+
+.from {
   width: 30%;
+}
+
+.date {
+  width: 20%;
 }

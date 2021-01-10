@@ -10,8 +10,8 @@ const Expenditure = (props) => {
   return (
     <div className='expenditure'>
       <p className='description'>{props.expenditure.description}</p>
-      <p className='budget'>{formatter.format(props.expenditure.budget)}</p>
-      <p className='actual'>{formatter.format(props.expenditure.actual)}</p>
+      <p className='description'>{formatter.format(props.expenditure.budget)}</p>
+      <p className='description'>{formatter.format(props.expenditure.actual)}</p>
     </div>
   );
 }

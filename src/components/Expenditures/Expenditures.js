@@ -49,17 +49,17 @@ export default function ExpenditureTable() {
   }, 0);
 
   return (
-    <div>
+    <div className='comp-main'>
       <h3>Expenditure</h3>
       <div className='expenditure'>
-        <p className='title description'>Description</p>
-        <p className='title budget'>Budget</p>
-        <p className='title actual'>Actual</p>
+        <p className='title'>Description</p>
+        <p className='title'>Budget</p>
+        <p className='title'>Actual</p>
       </div>
       {renderedExpenditure}
       <div className='expenditure'>
-        <p className='title description'>TOTAL</p>
-        <p className='title budget'>{formatter.format(totalBudget)}</p>
+        <p className='title actual'>TOTAL</p>
+        <p className='title actual'>{formatter.format(totalBudget)}</p>
         <p className='title actual'>{formatter.format(totalActual)}</p>
       </div>
     </div>

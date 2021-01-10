@@ -37,18 +37,17 @@ const messages = [
 ]
 
 const Inbox = () => {
-  const renderedMessages = messages.map((message) => (
+  const renderedMessages = messages.map((message) =>
     <Message key={message.id} message={message} />
-  )
   )
 
   return (
-    <div>
+    <div className='comp-main'>
       <h3>Messages</h3>
       <div className='inbox'>
-        <p className='title from'>From</p>
-        <p className='title subject'>Subject</p>
-        <p className='title date'>Date</p>
+        <p className='inb from'>From</p>
+        <p className='inb subject'>Subject</p>
+        <p className='inb date'>Date</p>
       </div>
       {renderedMessages}
     </div>
