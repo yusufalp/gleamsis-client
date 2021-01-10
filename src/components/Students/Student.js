@@ -52,9 +52,8 @@ class Student extends React.Component {
           )}
         </div>
         <button type='submit' onClick={e => this.handleConfirmStudent(student)}>Delete Student</button>
-
         <div className={`delete-message ${this.state.confirm ? '' : 'hidden'}`}>
-          <p >{this.state.message}</p>
+          <p>{this.state.message}</p>
           <button onClick={e => this.handleConfirmDelete(student)} className='btn-delete'>Yes</button>
           <button onClick={this.handleCancelDelete}>No</button>
         </div>

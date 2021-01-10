@@ -10,7 +10,7 @@ const Home = () => {
         <h1>GleamSIS</h1>
         <p>
           Welcome to GleamSIS. Your one stop student information system.
-          </p>
+        </p>
       </header>
       <main>
         <section className='group'>

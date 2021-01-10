@@ -8,7 +8,7 @@ const Pricing = () => {
         <h2>Pricing</h2>
         <p>
           We have a solution for every budget
-          </p>
+        </p>
       </header>
       <main>
         <div className='group4'>
@@ -16,7 +16,7 @@ const Pricing = () => {
             <h3>Individual Schools</h3>
             <p>
               Small size schools
-              </p>
+            </p>
             <ul>
               <li>Up to 1000 users</li>
               <li>Up to 10 admin users</li>
@@ -29,7 +29,7 @@ const Pricing = () => {
             <h3>Districts</h3>
             <p>
               Larger or multiple schools
-              </p>
+            </p>
             <ul>
               <li>Up to 5000 users</li>
               <li>Up to 100 admin users</li>
@@ -42,7 +42,7 @@ const Pricing = () => {
             <h3>Enterprise</h3>
             <p>
               Contact us for a personalized offer
-              </p>
+            </p>
             <Link to='/contact' className='btn-add'>Contact</Link>
           </section>
         </div>
