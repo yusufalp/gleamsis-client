@@ -13,7 +13,9 @@ exports[`Dashboard component renders the UI as expected 1`] = `
     <div
       className="item-dash card-display inbox-table"
     >
-      <div>
+      <div
+        className="comp-main"
+      >
         <h3>
           Messages
         </h3>
@@ -21,17 +23,17 @@ exports[`Dashboard component renders the UI as expected 1`] = `
           className="inbox"
         >
           <p
-            className="title from"
+            className="inb from"
           >
             From
           </p>
           <p
-            className="title subject"
+            className="inb subject"
           >
             Subject
           </p>
           <p
-            className="title date"
+            className="inb date"
           >
             Date
           </p>
@@ -52,7 +54,7 @@ exports[`Dashboard component renders the UI as expected 1`] = `
           <p
             className="date"
           >
-            1/9/2021
+            1/10/2021
           </p>
         </div>
         <div
@@ -71,7 +73,7 @@ exports[`Dashboard component renders the UI as expected 1`] = `
           <p
             className="date"
           >
-            1/9/2021
+            1/10/2021
           </p>
         </div>
         <div
@@ -90,7 +92,7 @@ exports[`Dashboard component renders the UI as expected 1`] = `
           <p
             className="date"
           >
-            1/9/2021
+            1/10/2021
           </p>
         </div>
       </div>
@@ -98,7 +100,9 @@ exports[`Dashboard component renders the UI as expected 1`] = `
     <div
       className="item-dash card-display exp-table"
     >
-      <div>
+      <div
+        className="comp-main"
+      >
         <h3>
           Expenditure
         </h3>
@@ -106,17 +110,17 @@ exports[`Dashboard component renders the UI as expected 1`] = `
           className="expenditure"
         >
           <p
-            className="title description"
+            className="title"
           >
             Description
           </p>
           <p
-            className="title budget"
+            className="title"
           >
             Budget
           </p>
           <p
-            className="title actual"
+            className="title"
           >
             Actual
           </p>
@@ -130,12 +134,12 @@ exports[`Dashboard component renders the UI as expected 1`] = `
             Teacher Salary
           </p>
           <p
-            className="budget"
+            className="description"
           >
             $86,000.00
           </p>
           <p
-            className="actual"
+            className="description"
           >
             $87,432.00
           </p>
@@ -149,12 +153,12 @@ exports[`Dashboard component renders the UI as expected 1`] = `
             Books
           </p>
           <p
-            className="budget"
+            className="description"
           >
             $23,135.00
           </p>
           <p
-            className="actual"
+            className="description"
           >
             $23,246.00
           </p>
@@ -168,12 +172,12 @@ exports[`Dashboard component renders the UI as expected 1`] = `
             Sanitation
           </p>
           <p
-            className="budget"
+            className="description"
           >
             $2,500.00
           </p>
           <p
-            className="actual"
+            className="description"
           >
             $4,500.00
           </p>
@@ -187,12 +191,12 @@ exports[`Dashboard component renders the UI as expected 1`] = `
             Lunch
           </p>
           <p
-            className="budget"
+            className="description"
           >
             $3,453.00
           </p>
           <p
-            className="actual"
+            className="description"
           >
             $3,453.00
           </p>
@@ -201,12 +205,12 @@ exports[`Dashboard component renders the UI as expected 1`] = `
           className="expenditure"
         >
           <p
-            className="title description"
+            className="title actual"
           >
             TOTAL
           </p>
           <p
-            className="title budget"
+            className="title actual"
           >
             $115,088.00
           </p>

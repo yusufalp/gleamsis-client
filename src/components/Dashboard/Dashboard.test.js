@@ -20,7 +20,7 @@ describe('Dashboard component', () => {
         <MemoryRouter>
           <Dashboard />
         </MemoryRouter>)
-      .toJSON();
+      .toJSON()
     expect(tree).toMatchSnapshot();
   });
 });

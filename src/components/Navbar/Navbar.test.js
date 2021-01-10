@@ -20,7 +20,7 @@ describe('Navbar component', () => {
         <MemoryRouter>
           <Navbar />
         </MemoryRouter>)
-      .toJSON();
+      .toJSON()
     expect(tree).toMatchSnapshot();
   });
 });
