@@ -5,18 +5,15 @@ GleamSIS is a student information systems project. GleamSIS is born because educ
 Live demo can be access at [gleamsis.vercel.app](https://gleamsis.vercel.app/)
 
 ## Technologies Used
-`React 16.13`
 
-`Node 12.18`
-
-`Express 4.17`
-
-`PostgreSQL 12.4`
+- `React 16.13`
+- `Node 12.18`
+- `Express 4.17`
+- `PostgreSQL 12.4`
 
 API is hosted on Heroku
 
 Live web is hosted on Vercel
-
 
 ### How to run this program locally
 
@@ -46,16 +43,18 @@ sending us a pull request.
 
 https://github.com/yusufalp/gleamsis-client/issues
 
-
 ## Screenshots
+
 ### Home Page
+
 ![Home Page](https://i.ibb.co/PjVRChW/home-page.png)
 
 ### Login Page
+
 ![Login Page](https://i.ibb.co/wSwPdb8/login-page.png)
 
 ### Dashboard Page
-![Dashboard Page](https://i.ibb.co/vHgxtCD/dash-page.png)
 
+![Dashboard Page](https://i.ibb.co/vHgxtCD/dash-page.png)
 
 #### Developed by Yusuf Alp
