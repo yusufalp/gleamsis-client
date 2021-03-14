@@ -80,9 +80,9 @@ class AddCourse extends React.Component {
             required
             onChange={e => this.handleTeacherId(e.target.value)}>
             <option value=''>Select a Teacher</option>
-            {this.context.teachers.map((teacher, i) =>
+            {!this.context.teachers.error ? this.context.teachers.map((teacher, i) =>
               <option key={i} value={teacher.id}>{teacher.first_name} {teacher.last_name}</option>
-            )}
+            ) : ""}
           </select>
           <button type='submit'>Add Course</button>
           <p>{this.state.error}</p>

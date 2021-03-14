@@ -79,9 +79,9 @@ class AddStudent extends React.Component {
             required
             onChange={e => this.handleCourseId(e.target.value)}>
             <option value=''>Select a Course</option>
-            {this.context.courses.map((course, i) =>
+            {!this.context.courses.error ? this.context.courses.map((course, i) =>
               <option key={i} value={course.id}>{course.name}</option>
-            )}
+            ) : ""}
           </select>
           <label htmlFor='grade'></label>
           <select
