@@ -33,9 +33,9 @@ class Dashboard extends React.Component {
                 </tr>
               </thead>
               <tbody>
-                {this.context.courses.map((course, i) =>
+                {this.context.courses ? this.context.courses.map((course, i) =>
                   <Teachers key={i} course={course} />
-                )}
+                ) : ""}
               </tbody>
             </table>
             <Link to={'/add-teacher'} className='btn-add'>Add Teacher</Link>
