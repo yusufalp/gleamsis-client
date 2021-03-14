@@ -5,7 +5,10 @@ import DataContext from '../DataContext';
 class Teachers extends React.Component {
   static contextType = DataContext;
   render() {
-    let teachers = this.context.teachers.find(teacher => teacher.id === this.props.course.teacher_id) || {};
+    let teachers = [];
+    if (!this.context.teachers.error) {
+      teachers = this.context.teachers.find(teacher => teacher.id === this.props.course.teacher_id) || {};
+    }
     return (
       <tr>
         <td>

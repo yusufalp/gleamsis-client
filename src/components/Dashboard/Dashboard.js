@@ -33,7 +33,7 @@ class Dashboard extends React.Component {
                 </tr>
               </thead>
               <tbody>
-                {this.context.courses ? this.context.courses.map((course, i) =>
+                {!this.context.courses.error ? this.context.courses.map((course, i) =>
                   <Teachers key={i} course={course} />
                 ) : ""}
               </tbody>

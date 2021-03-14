@@ -28,14 +28,20 @@ class Student extends React.Component {
   };
 
   render() {
-    let student = this.context.students.find(student => student.id === Number(this.props.match.params.id)) || {};
-    let courses = this.context.students.filter(course => course.first_name === student.first_name);
+    let student = [];
+    let courses = [];
+    if (!this.context.students.error) {
+      student = this.context.students.find(student => student.id === Number(this.props.match.params.id)) || {};
+      courses = this.context.students.filter(course => course.first_name === student.first_name);
+    }
     let courseIndex = [];
     let enrolledCourses = [];
     courses.forEach(courses => courseIndex.push(courses.course_id));
-    for (let i = 0; i < courseIndex.length; i++) {
-      let courseObj = this.context.courses.find(course => Number(course.id) === Number(courseIndex[i]));
-      enrolledCourses.push(courseObj);
+    if (!this.context.courses.error) {
+      for (let i = 0; i < courseIndex.length; i++) {
+        let courseObj = this.context.courses.find(course => Number(course.id) === Number(courseIndex[i]));
+        enrolledCourses.push(courseObj);
+      }
     }
     return (
       <div className='dash'>
