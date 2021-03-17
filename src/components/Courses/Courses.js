@@ -5,9 +5,14 @@ import DataContext from '../DataContext';
 class Courses extends React.Component {
   static contextType = DataContext;
   render() {
-    let course = this.context.courses.find(course => course.id === Number(this.props.match.params.id)) || {};
-    let teacher = this.context.teachers.find(teacher => teacher.id === course.teacher_id) || {};
-    let students = this.context.students.filter(students => students.course_id === course.id);
+    let course = [];
+    let teacher = [];
+    let students = [];
+    if (!this.context.courses.error && !this.context.teachers.error && this.context.students.error) {
+      course = this.context.courses.find(course => course.id === Number(this.props.match.params.id)) || {};
+      teacher = this.context.teachers.find(teacher => teacher.id === course.teacher_id) || {};
+      students = this.context.students.filter(students => students.course_id === course.id);
+    }
     return (
       <div className='dash'>
         <h3>Hello {teacher.first_name}, this is {course.name} class</h3>
