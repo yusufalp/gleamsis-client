@@ -29,10 +29,8 @@ class Teacher extends React.Component {
   render() {
     let teacher = [];
     let courses = [];
-    if (!this.context.teachers.error && this.context.courses.error) {
-      teacher = this.context.teachers.find(teacher => teacher.id === Number(this.props.match.params.id)) || {};
-      courses = this.context.courses.filter(course => course.teacher_id === teacher.id);
-    }
+    teacher = this.context.teachers.find(teacher => teacher.id === Number(this.props.match.params.id)) || {};
+    courses = this.context.courses.filter(course => course.teacher_id === teacher.id);
     return (
       <div className='dash'>
         <h2>Hello admin,</h2>
