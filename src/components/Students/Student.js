@@ -30,10 +30,8 @@ class Student extends React.Component {
   render() {
     let student = [];
     let courses = [];
-    if (!this.context.students.error) {
-      student = this.context.students.find(student => student.id === Number(this.props.match.params.id)) || {};
-      courses = this.context.students.filter(course => course.first_name === student.first_name);
-    }
+    student = this.context.students.find(student => student.id === Number(this.props.match.params.id)) || {};
+    courses = this.context.students.filter(course => course.first_name === student.first_name);
     let courseIndex = [];
     let enrolledCourses = [];
     courses.forEach(courses => courseIndex.push(courses.course_id));
