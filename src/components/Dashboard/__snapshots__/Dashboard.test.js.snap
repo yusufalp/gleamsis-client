@@ -54,7 +54,7 @@ exports[`Dashboard component renders the UI as expected 1`] = `
           <p
             className="date"
           >
-            3/16/2021
+            4/13/2021
           </p>
         </div>
         <div
@@ -73,7 +73,7 @@ exports[`Dashboard component renders the UI as expected 1`] = `
           <p
             className="date"
           >
-            3/16/2021
+            4/13/2021
           </p>
         </div>
         <div
@@ -92,7 +92,7 @@ exports[`Dashboard component renders the UI as expected 1`] = `
           <p
             className="date"
           >
-            3/16/2021
+            4/13/2021
           </p>
         </div>
       </div>
